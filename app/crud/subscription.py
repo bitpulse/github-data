@@ -14,7 +14,8 @@ async def create_subscription(db: AsyncIOMotorDatabase, subscription: Subscripti
     subscription_dict.update({
         "start_date": start_date,
         "next_billing_date": next_billing_date,
-        "paypal_agreement_id": ""  # This will be updated after PayPal agreement creation
+        "paypal_agreement_id": "",
+        "status": "pending"
     })
     result = await db.subscriptions.insert_one(subscription_dict)
     return SubscriptionModel(_id=result.inserted_id, **subscription_dict)
