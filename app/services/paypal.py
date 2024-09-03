@@ -1,7 +1,6 @@
 import paypalrestsdk
 from paypalrestsdk import BillingPlan, BillingAgreement
 from app.config import settings
-from app.models.server import ServerModel
 from app.models.subscription import SubscriptionModel
 from datetime import datetime, timedelta
 
@@ -11,10 +10,10 @@ paypalrestsdk.configure({
     "client_secret": settings.paypal_client_secret
 })
 
-def create_billing_plan(server: ServerModel):
+def create_billing_plan():
     billing_plan = BillingPlan({
-        "name": f"Plan for {server.name}",
-        "description": f"Monthly subscription for {server.name}",
+        "name": settings.subscription_name,
+        "description": f"Monthly subscription for {settings.subscription_name}",
         "type": "INFINITE",
         "payment_definitions": [{
             "name": "Monthly Payments",
@@ -22,7 +21,7 @@ def create_billing_plan(server: ServerModel):
             "frequency": "MONTH",
             "frequency_interval": "1",
             "amount": {
-                "value": str(server.price),
+                "value": str(settings.subscription_price),
                 "currency": "USD"
             },
             "cycles": "0",
@@ -45,23 +44,17 @@ def create_billing_plan(server: ServerModel):
     else:
         raise Exception("Failed to create billing plan")
 
-def create_agreement(billing_plan: BillingPlan, subscription: SubscriptionModel, prorated_amount: float):
+def create_agreement(billing_plan: BillingPlan, subscription: SubscriptionModel):
     start_date = datetime.now() + timedelta(minutes=5)
     billing_agreement = BillingAgreement({
-        "name": f"Agreement for {billing_plan.name}",
-        "description": f"Monthly subscription for {billing_plan.description}",
+        "name": f"Agreement for {settings.subscription_name}",
+        "description": f"Monthly subscription for {settings.subscription_name}",
         "start_date": start_date.isoformat(),
         "plan": {
             "id": billing_plan.id
         },
         "payer": {
             "payment_method": "paypal"
-        },
-        "override_merchant_preferences": {
-            "setup_fee": {
-                "value": str(prorated_amount),
-                "currency": "USD"
-            }
         }
     })
 
