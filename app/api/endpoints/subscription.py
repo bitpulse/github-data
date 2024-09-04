@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from app.schemas.subscription import SubscriptionCreate, SubscriptionUpdate, SubscriptionInDB
 from app.crud.subscription import create_subscription, get_subscription, update_subscription, delete_subscription
-from app.services.paypal import create_billing_plan, create_agreement
+from app.services.paypal import create_billing_plan, create_agreement, execute_agreement
 from datetime import datetime
 
 router = APIRouter()
@@ -10,7 +10,7 @@ router = APIRouter()
 async def get_database() -> AsyncIOMotorDatabase:
     return router.app.mongodb
 
-@router.post("/", response_model=SubscriptionInDB)
+@router.post("/", response_model=dict)
 async def create_subscription_endpoint(
     subscription: SubscriptionCreate,
     db: AsyncIOMotorDatabase = Depends(get_database)
@@ -23,13 +23,39 @@ async def create_subscription_endpoint(
     agreement = create_agreement(billing_plan, db_subscription)
 
     # Update subscription with PayPal agreement ID
-    updated_subscription = await update_subscription(
+    await update_subscription(
         db, 
         str(db_subscription.id), 
         SubscriptionUpdate(paypal_agreement_id=agreement.id)
     )
 
-    return {**updated_subscription.dict(), "approval_url": agreement.links[0].href}
+    return {
+        "subscription_id": str(db_subscription.id),
+        "approval_url": next(link.href for link in agreement.links if link.rel == "approval_url")
+    }
+
+@router.post("/{subscription_id}/execute")
+async def execute_subscription_agreement(
+    subscription_id: str,
+    payer_id: str,
+    db: AsyncIOMotorDatabase = Depends(get_database)
+):
+    subscription = await get_subscription(db, subscription_id)
+    if not subscription:
+        raise HTTPException(status_code=404, detail="Subscription not found")
+
+    agreement = execute_agreement(subscription.paypal_agreement_id, payer_id)
+
+    await update_subscription(
+        db,
+        subscription_id,
+        SubscriptionUpdate(
+            next_billing_date=datetime.fromisoformat(agreement.agreement_details.next_billing_date),
+            status="active"
+        )
+    )
+
+    return {"message": "Subscription activated successfully"}
 
 @router.get("/{subscription_id}", response_model=SubscriptionInDB)
 async def read_subscription(subscription_id: str, db: AsyncIOMotorDatabase = Depends(get_database)):
