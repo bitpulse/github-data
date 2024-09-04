@@ -18,7 +18,7 @@ async def create_subscription(db: AsyncIOMotorDatabase, subscription: Subscripti
         "status": "pending"
     })
     result = await db.subscriptions.insert_one(subscription_dict)
-    return SubscriptionModel(_id=result.inserted_id, **subscription_dict)
+    return SubscriptionModel(**{**subscription_dict, "_id": result.inserted_id})
 
 async def get_subscription(db: AsyncIOMotorDatabase, subscription_id: str) -> SubscriptionModel | None:
     subscription = await db.subscriptions.find_one({"_id": ObjectId(subscription_id)})
