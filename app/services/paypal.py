@@ -62,3 +62,10 @@ def create_agreement(billing_plan: BillingPlan, subscription: SubscriptionModel)
         return billing_agreement
     else:
         raise Exception("Failed to create billing agreement")
+
+def execute_agreement(agreement_id: str, payer_id: str):
+    agreement = BillingAgreement.find(agreement_id)
+    if agreement.execute({"payer_id": payer_id}):
+        return agreement
+    else:
+        raise Exception("Failed to execute agreement")
