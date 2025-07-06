@@ -4,125 +4,197 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Python project for collecting GitHub data from cryptocurrency projects for time series analysis and charting. The system integrates with an existing `crypto_project` MongoDB collection to monitor GitHub repositories and track development activity over time.
+This is a Docker-based GitHub data collector for cryptocurrency projects. It monitors GitHub repositories of crypto projects, collecting time series data for analysis and charting. The system integrates with an existing `crypto_project` MongoDB collection to automatically discover repositories and track development activity.
 
 ### Key Features
 
-- Automatically extracts GitHub repositories from `crypto_project` collection
-- Links all GitHub data to `coin_id` for correlation with market data
-- Stores time series data optimized for frontend charts
-- Tracks changes (deltas) between data points
-- Creates daily aggregations for fast chart queries
-- Continuous monitoring with configurable intervals
+- **Automatic Repository Discovery**: Extracts GitHub repos from `crypto_project` collection
+- **Time Series Storage**: MongoDB collections optimized for temporal queries  
+- **Smart Contributor Tracking**: Two-phase approach to avoid rate limit issues
+- **Change Tracking**: Calculates deltas between data points for trend analysis
+- **Chart-Ready Data**: Pre-formatted for direct frontend consumption
+- **Docker Deployment**: Simple deployment with `./deploy.sh`
+- **Continuous Monitoring**: Runs hourly by default (configurable)
 
-## Project Structure
+## Current Architecture
+
+### Simplified Docker Setup
 
 ```
 github-data/
-├── crypto_github_collector.py  # Single-file solution for continuous collection
-├── main_crypto.py             # Modular version with crypto integration
-├── extract_crypto_repos.py    # Extract repos from crypto_project collection
-├── requirements.txt           # Python dependencies
-├── .env.example              # Configuration template
-├── src/
-│   ├── config/               # Settings and metrics configuration
-│   ├── collectors/           # GitHub data collectors (with coin_id support)
-│   ├── storage/              # MongoDB and time series operations
-│   ├── models/               # Pydantic data schemas
-│   ├── analysis/             # Chart data aggregation and API
-│   └── utils/                # Crypto mapping utilities
-└── examples/
-    ├── view_data.py          # View collected data
-    └── backend_api_examples.py # Chart-ready API examples
+├── crypto_github_collector_v4.py  # Main collector (V4 with smart contributor tracking)
+├── Dockerfile                     # Python 3.11 slim container
+├── docker-compose.yml             # Service configuration
+├── deploy.sh                      # One-command deployment
+├── .env.example                   # Configuration template
+├── requirements.txt               # Python dependencies
+├── view_summary.py               # View collected data
+└── Documentation/
+    ├── README.md                 # Main documentation (Docker-focused)
+    ├── EC2_DOCKER_SETUP.md      # EC2 deployment guide
+    ├── BACKEND_API_GUIDE.md     # API implementation examples
+    ├── API_QUICK_REFERENCE.md   # Quick API reference
+    └── CHART_INTEGRATION.md     # Chart data integration guide
 ```
 
-## Development Setup
+## Deployment
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Copy `.env.example` to `.env` and configure:
-   - Add your GitHub personal access token
-   - Configure MongoDB connection URI
-3. Ensure MongoDB 5.0+ is running (required for time series collections)
-
-## Architecture
-
-### Integration with Crypto Projects
-
-The system reads from your existing `crypto_project` collection to automatically discover GitHub repositories. Each repository is linked to its `coin_id` for correlation analysis.
-
-### Core Components
-
-1. **Data Collection**:
-   - Extracts repos from `crypto_project` collection
-   - Collects GitHub metrics with PyGithub
-   - Links all data to `coin_id`
-   - Rate limiting with 80% buffer
-
-2. **Time Series Storage**:
-   - `repo_stats_timeseries` - Hourly GitHub metrics with coin_id
-   - `daily_repo_stats` - Aggregated daily data for charts
-   - MongoDB time series collections with automatic optimization
-
-3. **Chart Data API**:
-   - Ready-to-use functions for backend integration
-   - Returns JSON formatted for frontend charts
-   - Multiple chart types: stars, commits, dashboard, leaderboard
-
-### Data Flow
-
-```
-crypto_project collection → Repository Extraction → GitHub API Collection → 
-Time Series Storage → Chart Aggregation → Backend API → Frontend Charts
-```
-
-## Common Tasks
-
-### Quick Start
+### Quick Start (Docker)
 
 ```bash
-# Single command to start continuous monitoring
-python crypto_github_collector.py
+# 1. Configure
+cp .env.example .env
+# Edit .env with credentials
+
+# 2. Deploy
+./deploy.sh
 ```
 
-### Data Collection Options
+### Environment Variables
 
-- `python crypto_github_collector.py` - Continuous monitoring (every hour)
-- `python crypto_github_collector.py --once` - Run once for all repos
-- `python crypto_github_collector.py --primary` - Primary repos only
-- `python crypto_github_collector.py --list` - See what will be monitored
+```env
+# Required
+GITHUB_TOKEN=your_github_token
+MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net
+MONGODB_DATABASE=github_crypto_analysis
 
-### Viewing Chart Data
-
-```bash
-# Test chart API endpoints
-python examples/backend_api_examples.py --demo
-
-# View raw data
-python examples/view_data.py --repo bitcoin/bitcoin
+# Optional  
+COLLECTION_INTERVAL_HOURS=1
+ENABLE_CONTRIBUTOR_TRACKING=true
+MAX_CONTRIBUTORS_PER_REPO=50
 ```
 
-### Backend Integration
+## Data Collection
+
+### V4 Collector Features
+
+1. **Smart Rate Limiting**: Uses 80% of GitHub API quota efficiently
+2. **Two-Phase Contributor Tracking**:
+   - Phase 1: Basic contributor data during main collection
+   - Phase 2: Detailed profiles via `--update-contributors`
+3. **Timezone-Aware**: All datetime comparisons handle timezones correctly
+4. **Efficient Commit Counting**: Uses `totalCount` (single API call) instead of pagination
+
+### Recent Bug Fixes
+
+- **Commit Counting**: Fixed inefficient API usage in `_count_commits_since()` 
+  - Now uses `totalCount` for accurate counts (not capped at 100)
+  - Reduces API calls from 4+ to just 1
+- **Timezone Handling**: Added `_ensure_timezone_aware()` helper
+  - Fixes "can't subtract offset-naive and offset-aware datetimes" errors
+
+## Data Structure
+
+### Time Series Collections
+
+**`repo_stats_timeseries`** (hourly):
+```javascript
+{
+  timestamp: ISODate("2025-01-15T10:00:00Z"),
+  repo: {
+    coin_id: "bitcoin",
+    owner: "bitcoin", 
+    name: "bitcoin",
+    is_primary_repo: true
+  },
+  stats: {
+    stars: 84438,
+    stars_change: +5,
+    forks: 37486,
+    forks_change: +2
+  },
+  activity: {
+    commits_last_24h: 8,
+    commits_last_7d: 67,
+    total_contributors: 845
+  }
+}
+```
+
+**`daily_repo_stats`** (aggregated):
+```javascript
+{
+  coin_id: "bitcoin",
+  date: "2025-01-15",
+  metrics: {
+    stars_end: 84438,
+    commits_24h: 8,
+    total_contributors: 845
+  }
+}
+```
+
+## Backend Integration
+
+### Fetching Chart Data
 
 ```python
-from src.analysis.chart_data_api import chart_api
+# MongoDB aggregation for historical data
+pipeline = [
+    {
+        '$match': {
+            'repo.coin_id': coin_id,
+            'timestamp': {'$gte': start_date}
+        }
+    },
+    {
+        '$group': {
+            '_id': {'$dateToString': {'format': '%Y-%m-%d', 'date': '$timestamp'}},
+            'total_stars': {'$sum': '$stats.stars'},
+            'total_forks': {'$sum': '$stats.forks'}
+        }
+    },
+    {'$sort': {'_id': 1}}
+]
 
-# Get chart-ready data
-stars_chart = chart_api.get_stars_chart_data('bitcoin', days=30)
-dashboard = chart_api.get_multi_metric_dashboard('ethereum', days=7)
+# Format for Chart.js
+return {
+    'labels': [r['_id'] for r in results],
+    'datasets': [
+        {
+            'label': 'Stars',
+            'data': [r['total_stars'] for r in results],
+            'borderColor': 'rgb(255, 206, 86)'
+        }
+    ]
+}
 ```
 
-## Key Implementation Details
+## Monitoring
 
-1. **Crypto Integration**: Automatically discovers repos from `crypto_project` collection
-2. **Chart-Ready Data**: All data formatted for direct use in frontend charts
-3. **Time Series Storage**: MongoDB collections optimized for time-based queries
-4. **Change Tracking**: Every data point includes deltas for trend analysis
-5. **Rate Limiting**: Smart rate limiter prevents API exhaustion
-6. **Scalability**: Handles hundreds of repositories across multiple projects
+### Docker Commands
+
+```bash
+# View logs
+docker-compose logs -f
+
+# Check data collection
+docker-compose exec github-collector python view_summary.py
+
+# Manual data check
+docker-compose exec github-collector python fetch_chart_data.py bitcoin --days 7
+```
+
+### Health Checks
+
+The system logs:
+- Collection progress every 10 repositories
+- Rate limit status when < 100 remaining
+- Success/error counts after each run
+- Failed repositories list
 
 ## Important Notes
 
-- The system expects a `crypto_project` collection with GitHub URLs in `links.repos_url.github`
-- All GitHub data is linked to `coin_id` for correlation with market data
-- Time series data accumulates over time for better trend analysis
-- Daily aggregations are created automatically for faster chart queries
+- **MongoDB 5.0+** required for time series collections
+- **Monitors 189 repositories** from 87 crypto projects by default
+- **Primary repos collected first**, secondary if rate limit allows
+- **Data accumulates over time** - charts populate as collection continues
+- **No virtual environment needed** - Docker handles dependencies
+
+## Recent Updates (July 2025)
+
+1. **Cleaned repository** - Removed unnecessary files for Docker deployment
+2. **Fixed commit counting bug** - More efficient and accurate
+3. **Updated README** - Docker-focused with clear deployment steps
+4. **Added chart integration docs** - Shows how to fetch historical data
+5. **Simplified .env.example** - Only essential configuration
