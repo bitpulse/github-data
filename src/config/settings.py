@@ -2,7 +2,8 @@ import os
 from pathlib import Path
 from typing import Optional
 from dotenv import load_dotenv
-from pydantic import BaseSettings, Field
+from pydantic import Field
+from pydantic_settings import BaseSettings
 
 # Load environment variables
 env_path = Path(__file__).parent.parent.parent / '.env'
@@ -41,9 +42,10 @@ class Settings(BaseSettings):
     log_level: str = Field(default='INFO', env='LOG_LEVEL')
     log_file: Optional[str] = Field(default='logs/github_collector.log', env='LOG_FILE')
     
-    class Config:
-        env_file = '.env'
-        case_sensitive = False
+    model_config = {
+        'env_file': '.env',
+        'case_sensitive': False
+    }
 
 
 # Create global settings instance

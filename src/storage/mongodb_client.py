@@ -64,7 +64,7 @@ class MongoDBClient:
                 settings.release_milestones_collection,
                 time_field='timestamp',
                 meta_field='repo',
-                granularity='days'  # Less frequent updates
+                granularity='hours'  # MongoDB only supports seconds, minutes, or hours
             )
             logger.info(f"Created time series collection: {settings.release_milestones_collection}")
         

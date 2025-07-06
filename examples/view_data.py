@@ -4,12 +4,13 @@ Example script to view collected GitHub data
 """
 
 import sys
+import os
 from datetime import datetime, timedelta
 from tabulate import tabulate
 from loguru import logger
 
 # Add parent directory to path
-sys.path.append('..')
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.config.settings import settings
 from src.storage.mongodb_client import mongodb_client
