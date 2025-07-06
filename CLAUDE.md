@@ -5,48 +5,90 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a Python project for collecting GitHub data to analyze cryptocurrency projects. The main goals are:
+
 - Collect all activities about a GitHub repository given a repo link
 - Collect all activities from a GitHub user
-- Use this data for crypto project analysis (activity levels, founders, etc.)
+- Store data in MongoDB time series collections for trend analysis
+- Track changes over time to predict project health and sustainability
 
 ## Project Structure
 
-The project is in early development stages with minimal structure:
+The project now has a complete implementation:
+
 ```
 github-data/
+├── main.py                    # Main collector with scheduler
+├── requirements.txt           # Python dependencies
+├── .env.example              # Configuration template
 ├── src/
-│   └── __init__.py    # Empty Python package initializer
-└── README.md          # Basic project description
+│   ├── config/               # Settings and metrics configuration
+│   ├── collectors/           # GitHub data collectors
+│   ├── storage/              # MongoDB and time series operations
+│   ├── models/               # Pydantic data schemas
+│   ├── analysis/             # Analysis modules (ready for expansion)
+│   ├── scheduler/            # Scheduling logic
+│   └── utils/                # Utility functions
+└── examples/
+    └── view_data.py          # Example data viewer
 ```
 
 ## Development Setup
 
-**Note**: This project currently has no dependency management files (requirements.txt, pyproject.toml, etc.) or defined development commands. When implementing features, you'll need to:
+1. Install dependencies: `pip install -r requirements.txt`
+2. Copy `.env.example` to `.env` and configure:
+   - Add your GitHub personal access token
+   - Configure MongoDB connection URI
+3. Ensure MongoDB 5.0+ is running (required for time series collections)
 
-1. Set up appropriate Python dependency management
-2. Install necessary libraries for GitHub API interaction (likely `requests` or `PyGithub`)
-3. Create proper module structure in the `src/` directory
+## Architecture
 
-## Architecture Considerations
+### Core Components
 
-When implementing the GitHub data collection features:
+1. **Data Collection** (PyGithub-based):
+   - Repository stats collector with change tracking
+   - Contributor activity collector (to be implemented)
+   - Rate limiting with 80% buffer of API limits
 
-1. **API Authentication**: You'll need to handle GitHub API authentication (personal access tokens or GitHub Apps)
-2. **Rate Limiting**: GitHub API has rate limits - implement proper handling
-3. **Data Storage**: Consider how collected data will be stored (JSON files, database, etc.)
-4. **Modular Design**: Separate concerns between:
-   - GitHub API client
-   - Data collection logic
-   - Data processing/analysis
-   - Storage/export functionality
+2. **Storage** (MongoDB Time Series):
+   - Automatic bucketing and compression
+   - Optimized for time-based queries
+   - Built-in data retention policies
 
-## Testing
+3. **Analysis** (Ready for expansion):
+   - Trend detection and growth analysis
+   - Anomaly detection
+   - Project health scoring
 
-No testing framework is currently set up. When adding tests, consider using `pytest` as it's the standard for Python projects.
+### MongoDB Collections
+
+- `repo_stats_timeseries` - Repository metrics (stars, forks, commits, etc.)
+- `contributor_activity_timeseries` - Developer activity tracking
+- `release_milestones_timeseries` - Release and milestone data
 
 ## Common Tasks
 
-Since the project has no established commands yet, when implementing features you should:
-- Create a `requirements.txt` or `pyproject.toml` for dependencies
-- Set up virtual environment management
-- Define entry points for the main functionality
+### Running the collector
+
+- `python main.py` - Run continuous hourly collection
+- `python main.py --once` - Run one-time collection
+
+### Viewing data
+
+- `python examples/view_data.py --repo owner/name` - View latest stats
+- `python examples/view_data.py --summary` - View all projects summary
+- `python examples/view_data.py --repo owner/name --trends --days 30` - View trends
+
+### Adding new crypto projects
+
+Edit the `CRYPTO_PROJECTS` list in `main.py`
+
+## Key Implementation Details
+
+1. **Rate Limiting**: Implemented in `BaseCollector` with automatic retry and backoff
+2. **Change Tracking**: Every data point includes deltas from previous collection
+3. **Error Handling**: Graceful handling of API errors, rate limits, and missing repos
+4. **Time Series**: Hourly granularity with automatic aggregation support
+5. **Monitored Projects**: 25+ major crypto projects including Bitcoin, Ethereum, DeFi protocols
+
+## Memories
+- `to memorize` added as a placeholder memory
