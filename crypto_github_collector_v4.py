@@ -381,17 +381,27 @@ class CryptoGitHubCollector:
             return None
     
     def _count_commits_since(self, repo, since: datetime) -> int:
-        """Count commits since a given date"""
+        """Count commits since a given date
+        
+        Uses totalCount for efficiency (single API call).
+        Returns actual count, not capped at 100.
+        """
         try:
             self._check_rate_limit()
             # Ensure since datetime is timezone-aware
             since = self._ensure_timezone_aware(since)
             commits = repo.get_commits(since=since)
-            # Don't access totalCount if it might trigger too many API calls
-            count = 0
-            for _ in commits[:100]:  # Limit to 100 commits
-                count += 1
-            return count
+            
+            # For recent commits (24h/7d), we can safely use totalCount
+            # as it's a single API call for count-only operations
+            try:
+                # This is efficient - PyGithub only makes one API call for totalCount
+                return commits.totalCount
+            except Exception:
+                # Fallback: count first page only (more efficient than iterating)
+                # get_page(0) fetches first page with default 30 items
+                first_page = commits.get_page(0)
+                return len(list(first_page))
         except Exception:
             return 0
     
