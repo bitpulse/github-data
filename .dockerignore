@@ -1,0 +1,16 @@
+venv/
+*.pyc
+__pycache__/
+.git/
+.gitignore
+*.log
+logs/*.log
+.env.local
+.DS_Store
+*.swp
+*.swo
+test_*.py
+check_results.txt
+collector.log
+nohup.out
+*.pid
