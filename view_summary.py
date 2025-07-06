@@ -31,8 +31,8 @@ def view_summary():
     print("=" * 60)
     
     # Get collection counts
-    repo_count = db.repo_stats_timeseries.count_documents({})
-    daily_count = db.daily_repo_stats.count_documents({})
+    repo_count = db.github_repo_stats_timeseries.count_documents({})
+    daily_count = db.github_daily_repo_stats.count_documents({})
     contrib_count = db.github_contributors.count_documents({})
     
     print(f"\n📊 Collection Statistics:")
@@ -41,7 +41,7 @@ def view_summary():
     print(f"  • Contributors tracked: {format_number(contrib_count)}")
     
     # Get latest data points
-    latest = list(db.repo_stats_timeseries.find().sort('timestamp', DESCENDING).limit(10))
+    latest = list(db.github_repo_stats_timeseries.find().sort('timestamp', DESCENDING).limit(10))
     
     if latest:
         print(f"\n⏰ Latest Data Collection:")
@@ -73,7 +73,7 @@ def view_summary():
     # Check data freshness
     now = datetime.now(timezone.utc)
     one_hour_ago = now - timedelta(hours=1)
-    recent_count = db.repo_stats_timeseries.count_documents({
+    recent_count = db.github_repo_stats_timeseries.count_documents({
         'timestamp': {'$gte': one_hour_ago}
     })
     
@@ -121,7 +121,7 @@ def view_recent_activity(hours=24):
         {'$limit': 10}
     ]
     
-    active_projects = list(db.repo_stats_timeseries.aggregate(pipeline))
+    active_projects = list(db.github_repo_stats_timeseries.aggregate(pipeline))
     
     if active_projects:
         print("\n🔥 Most Active Projects:")

@@ -89,7 +89,7 @@ docker-compose ps
 
 ### Time Series Collections
 
-**`repo_stats_timeseries`** - Raw hourly data:
+**`github_repo_stats_timeseries`** - Raw hourly data:
 
 ```javascript
 {
@@ -115,7 +115,7 @@ docker-compose ps
 }
 ```
 
-**`daily_repo_stats`** - Aggregated for charts:
+**`github_daily_repo_stats`** - Aggregated for charts:
 
 ```javascript
 {
@@ -161,13 +161,13 @@ Your crypto_project Collection
 
 ```javascript
 // Get latest stats for a coin
-db.repo_stats_timeseries.findOne(
+db.github_repo_stats_timeseries.findOne(
   { "repo.coin_id": "bitcoin" },
   { sort: { timestamp: -1 } }
 );
 
 // Get daily aggregations for charts
-db.daily_repo_stats.find({
+db.github_daily_repo_stats.find({
   coin_id: "bitcoin",
   timestamp: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) },
 });

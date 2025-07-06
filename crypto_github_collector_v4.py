@@ -37,10 +37,10 @@ CONTRIBUTOR_CACHE_DAYS = int(os.getenv('CONTRIBUTOR_CACHE_DAYS', '7'))
 
 # Collection names
 CRYPTO_COLLECTION = 'crypto_project'
-REPO_STATS_COLLECTION = 'repo_stats_timeseries'
-DAILY_STATS_COLLECTION = 'daily_repo_stats'
+REPO_STATS_COLLECTION = 'github_repo_stats_timeseries'
+DAILY_STATS_COLLECTION = 'github_daily_repo_stats'
 CONTRIBUTORS_COLLECTION = 'github_contributors'
-CONTRIBUTOR_ACTIVITY_COLLECTION = 'contributor_activity_timeseries'
+CONTRIBUTOR_ACTIVITY_COLLECTION = 'github_contributor_activity_timeseries'
 
 
 class CryptoGitHubCollector:

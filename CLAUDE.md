@@ -87,7 +87,7 @@ MAX_CONTRIBUTORS_PER_REPO=50
 
 ### Time Series Collections
 
-**`repo_stats_timeseries`** (hourly):
+**`github_repo_stats_timeseries`** (hourly):
 ```javascript
 {
   timestamp: ISODate("2025-01-15T10:00:00Z"),
@@ -111,7 +111,7 @@ MAX_CONTRIBUTORS_PER_REPO=50
 }
 ```
 
-**`daily_repo_stats`** (aggregated):
+**`github_daily_repo_stats`** (aggregated):
 ```javascript
 {
   coin_id: "bitcoin",
