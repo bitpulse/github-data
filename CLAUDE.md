@@ -5,18 +5,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is a Python project for collecting GitHub data to analyze cryptocurrency projects. The main goals are:
+
 - Collect all activities about a GitHub repository given a repo link
 - Collect all activities from a GitHub user
-- Use this data for crypto project analysis (activity levels, founders, etc.)
+- Store data in MongoDB time series collections for trend analysis
+- Track changes over time to predict project health and sustainability
 
 ## Project Structure
 
-The project is in early development stages with minimal structure:
+The project now has a complete implementation:
+
 ```
 github-data/
+├── main.py                    # Main collector with scheduler
+├── requirements.txt           # Python dependencies
+├── .env.example              # Configuration template
 ├── src/
-│   └── __init__.py    # Empty Python package initializer
-└── README.md          # Basic project description
+│   ├── config/               # Settings and metrics configuration
+│   ├── collectors/           # GitHub data collectors
+│   ├── storage/              # MongoDB and time series operations
+│   ├── models/               # Pydantic data schemas
+│   ├── analysis/             # Analysis modules (ready for expansion)
+│   ├── scheduler/            # Scheduling logic
+│   └── utils/                # Utility functions
+└── examples/
+    └── view_data.py          # Example data viewer
 ```
 
 ## Development Setup
@@ -46,7 +59,30 @@ No testing framework is currently set up. When adding tests, consider using `pyt
 
 ## Common Tasks
 
-Since the project has no established commands yet, when implementing features you should:
-- Create a `requirements.txt` or `pyproject.toml` for dependencies
-- Set up virtual environment management
-- Define entry points for the main functionality
+### Running the collector:
+- `python main.py` - Run continuous hourly collection
+- `python main.py --once` - Run one-time collection
+
+### Viewing data:
+- `python examples/view_data.py --repo owner/name` - View latest stats
+- `python examples/view_data.py --summary` - View all projects summary
+
+### Adding new crypto projects:
+Edit the `CRYPTO_PROJECTS` list in `main.py`
+
+## MongoDB Time Series Collections
+
+The project uses MongoDB time series collections for efficient storage:
+- `repo_stats_timeseries` - Repository statistics with hourly granularity
+- `contributor_activity_timeseries` - Contributor activity tracking
+- `release_milestones_timeseries` - Release and milestone tracking
+
+## Key Implementation Details
+
+1. **Rate Limiting**: Implemented in `BaseCollector` with buffer (80% of limit)
+2. **Change Tracking**: Automatic delta calculation between data points
+3. **Bulk Operations**: Use `bulk_save_data()` for efficiency
+4. **Error Handling**: Graceful handling of API errors and rate limits
+
+## Memories
+- `to memorize` added as a placeholder memory
