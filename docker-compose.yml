@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  github-collector:
+    build: .
+    container_name: crypto-github-collector
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+      - MONGODB_URI=${MONGODB_URI}
+      - MONGODB_DATABASE=${MONGODB_DATABASE:-github_crypto_analysis}
+      - COLLECTION_INTERVAL_HOURS=${COLLECTION_INTERVAL_HOURS:-1}
+      - RATE_LIMIT_BUFFER=${RATE_LIMIT_BUFFER:-0.8}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - ENABLE_CONTRIBUTOR_TRACKING=${ENABLE_CONTRIBUTOR_TRACKING:-true}
+      - MAX_CONTRIBUTORS_PER_REPO=${MAX_CONTRIBUTORS_PER_REPO:-50}
+      - CONTRIBUTOR_PROFILE_DEPTH=${CONTRIBUTOR_PROFILE_DEPTH:-basic}
+      - CONTRIBUTOR_CACHE_DAYS=${CONTRIBUTOR_CACHE_DAYS:-7}
+    volumes:
+      - ./logs:/app/logs
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

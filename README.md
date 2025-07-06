@@ -20,146 +20,60 @@ This system bridges the gap between your crypto market data and GitHub developme
 - **Smart Rate Limiting**: Maximizes data collection within GitHub API limits
 - **Daily Aggregations**: Pre-computed summaries for fast chart rendering
 
-## Prerequisites
+## 🚀 Quick Start (Docker)
 
-- Python 3.8+
-- MongoDB 5.0+ (required for time series collections)
+```bash
+# 1. Clone and configure
+git clone <repo-url>
+cd github-data
+cp .env.example .env
+# Edit .env with your credentials
+
+# 2. Deploy with Docker
+./deploy.sh
+```
+
+That's it! The collector will run continuously in Docker.
+
+## 📋 Prerequisites
+
+- Docker & Docker Compose
+- MongoDB 5.0+ (local or cloud)
 - GitHub Personal Access Token
 
-## Setup
+## ⚙️ Configuration
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd github-data
-   ```
+Edit `.env` file:
+```env
+# Required
+GITHUB_TOKEN=your_github_token
+MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net
+MONGODB_DATABASE=github_crypto_analysis
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+# Optional
+COLLECTION_INTERVAL_HOURS=1
+LOG_LEVEL=INFO
+ENABLE_CONTRIBUTOR_TRACKING=true
+MAX_CONTRIBUTORS_PER_REPO=50
+```
 
-3. **Configure environment**
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Edit `.env` and add:
-   - `GITHUB_TOKEN`: Your GitHub personal access token (get one at https://github.com/settings/tokens)
-   - `MONGODB_URI`: MongoDB connection string (default: `mongodb://localhost:27017/`)
-   - `MONGODB_DATABASE`: Database name (default: `github_crypto_analysis`)
-
-4. **Start MongoDB**
-   ```bash
-   # If using Docker
-   docker run -d -p 27017:27017 mongo:latest
-   
-   # Or ensure your local MongoDB is running
-   mongod
-   ```
-
-5. **Verify setup**
-   ```bash
-   python test_setup.py
-   ```
-   
-   This will check all dependencies, configuration, and connections.
-
-## Usage
-
-### Running the Collector
-
-**Single File Solution (Recommended)**:
+## 🐳 Docker Commands
 
 ```bash
-# Run continuous collection (monitors every hour)
-python crypto_github_collector.py
+# Deploy/Update
+./deploy.sh
 
-# Run one-time collection (all repositories)
-python crypto_github_collector.py --once
+# View logs
+docker-compose logs -f
 
-# Run one-time collection (primary repositories only)
-python crypto_github_collector.py --primary
+# Stop collector
+docker-compose down
 
-# List repositories that will be monitored
-python crypto_github_collector.py --list
-```
+# View collected data
+docker-compose exec github-collector python view_summary.py
 
-**Alternative Methods**:
-
-```bash
-# Extract and view repository mappings
-python extract_crypto_repos.py
-
-# Use modular version with more options
-python main_crypto.py
-```
-
-The collector will:
-- Extract GitHub repositories from your crypto_project collection
-- Link repository data to coin_id for correlation analysis
-- Gather comprehensive GitHub metrics
-- Calculate changes from previous data points
-- Store in MongoDB time series collections with crypto project mapping
-
-### Viewing Collected Data
-
-**View repository stats**:
-
-```bash
-python examples/view_data.py --repo bitcoin/bitcoin
-python examples/view_data.py --summary
-```
-
-**Backend API Examples (Chart-Ready Data)**:
-
-```bash
-# Demo all API endpoints
-python examples/backend_api_examples.py --demo
-
-# Test specific coin
-python examples/backend_api_examples.py --coin bitcoin --days 30
-```
-
-**Chart Data API Endpoints**:
-```python
-# In your backend, import the API
-from src.analysis.chart_data_api import chart_api
-
-# Get chart data for frontend
-stars_data = chart_api.get_stars_chart_data('bitcoin', days=30)
-dashboard_data = chart_api.get_multi_metric_dashboard('ethereum', days=7)
-leaderboard = chart_api.get_top_projects_leaderboard(limit=10)
-```
-
-**Example API Response (Chart-Ready)**:
-```json
-{
-  "coin_id": "bitcoin",
-  "metric": "stars",
-  "timeframe": "30d",
-  "chart_data": [
-    {"x": "2024-01-01", "y": 76000},
-    {"x": "2024-01-02", "y": 76012}
-  ],
-  "summary": {
-    "current": 76543,
-    "change": 543,
-    "change_percent": 0.71
-  }
-}
-```
-
-### Adding Custom Projects
-
-Edit `CRYPTO_PROJECTS` in `main.py`:
-```python
-CRYPTO_PROJECTS = [
-    ('bitcoin', 'bitcoin'),
-    ('ethereum', 'go-ethereum'),
-    # Add your project:
-    ('your-org', 'your-repo'),
-]
+# Check status
+docker-compose ps
 ```
 
 ## 📊 Data Collected
@@ -167,8 +81,8 @@ CRYPTO_PROJECTS = [
 ### Repository Metrics (Hourly)
 - **Basic Stats**: Stars, forks, watchers, open issues (with change tracking)
 - **Activity Metrics**: Commits (24h/7d), active contributors, top contributors
-- **Development Health**: PR merge rates, issue resolution times, code velocity
 - **Crypto Mapping**: Each data point linked to `coin_id` for correlation
+- **Contributor Tracking**: Smart two-phase approach to avoid rate limits
 
 ### Time Series Collections
 
@@ -187,6 +101,12 @@ CRYPTO_PROJECTS = [
     stars_change: +12,
     forks: 35678,
     forks_change: +3
+  },
+  activity: {
+    commits_last_24h: 5,
+    commits_last_7d: 45,
+    unique_contributors_7d: 12,
+    total_contributors: 845
   }
 }
 ```
@@ -199,14 +119,14 @@ CRYPTO_PROJECTS = [
   metrics: {
     stars_end: 76543,
     commits_24h: 8,
-    contributors_7d: 12
+    contributors_7d: 12,
+    total_contributors: 845
   }
 }
 ```
 
 ## 🏗️ Architecture
 
-### Data Flow
 ```
 Your crypto_project Collection
             ↓
@@ -221,57 +141,15 @@ Your crypto_project Collection
     Backend API Ready
 ```
 
-### Key Components
-- **Crypto Integration**: Reads from your existing `crypto_project` collection
-- **GitHub Collection**: PyGithub with smart rate limiting
-- **Time Series Storage**: MongoDB 5.0+ collections with automatic optimization
-- **Chart API**: Pre-built functions returning frontend-ready JSON
-- **Change Tracking**: Automatic delta calculations for trend analysis
-
-## 🪙 How It Works
-
-1. **Discovery**: Reads your `crypto_project` collection
-2. **Extraction**: Finds GitHub URLs in `links.repos_url.github`
-3. **Collection**: Gathers metrics every hour (configurable)
-4. **Storage**: Saves to time series with `coin_id` reference
-5. **Aggregation**: Creates daily summaries for charts
-6. **API Ready**: Provides chart-formatted JSON for your backend
-
-## 🚀 Quick Start Guide
-
-```bash
-# 1. Clone and setup
-git clone <repo-url>
-cd github-data
-pip install -r requirements.txt
-
-# 2. Configure
-cp .env.example .env
-# Edit .env with your GitHub token and MongoDB URI
-
-# 3. Start collecting
-python crypto_github_collector.py
-
-# That's it! Data collection starts immediately
-```
-
 ## 📈 Using the Data
 
 ### For Backend Developers
 
-```python
-from src.analysis.chart_data_api import chart_api
-
-# Get chart data for your API endpoints
-stars_data = chart_api.get_stars_chart_data('bitcoin', days=30)
-# Returns: {"chart_data": [{"x": "2024-01-01", "y": 76000}], ...}
-
-dashboard = chart_api.get_multi_metric_dashboard('ethereum')
-# Returns complete dashboard data with multiple metrics
-
-leaderboard = chart_api.get_top_projects_leaderboard()
-# Returns top projects by GitHub activity
-```
+📚 **See the comprehensive [Backend API Guide](BACKEND_API_GUIDE.md)** for:
+- Complete API endpoint examples
+- MongoDB query patterns
+- Frontend integration examples
+- Performance optimization tips
 
 ### Direct MongoDB Queries
 
@@ -289,11 +167,61 @@ db.daily_repo_stats.find({
 })
 ```
 
-## ⚙️ Configuration
+## 📖 Documentation
 
-All settings in `.env`:
-- `GITHUB_TOKEN`: Your personal access token (required)
-- `MONGODB_URI`: Connection string (default: localhost)
-- `MONGODB_DATABASE`: Database name
-- `COLLECTION_INTERVAL_HOURS`: How often to collect (default: 1)
-- `RATE_LIMIT_BUFFER`: API safety margin (default: 0.8)
+- [EC2 Docker Setup](EC2_DOCKER_SETUP.md) - Deploy on AWS EC2
+- [Backend API Guide](BACKEND_API_GUIDE.md) - Complete API implementation
+- [API Quick Reference](API_QUICK_REFERENCE.md) - Endpoint examples
+- [Dashboard Example](examples/dashboard_mockup.html) - Visualization mockup
+
+## 🔧 Manual Usage (without Docker)
+
+If you prefer running without Docker:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run once
+python crypto_github_collector_v4.py --once
+
+# Run continuously
+python crypto_github_collector_v4.py
+
+# List monitored repositories
+python crypto_github_collector_v4.py --list
+
+# Update contributor profiles
+python crypto_github_collector_v4.py --update-contributors
+```
+
+## 🔍 Monitoring
+
+```bash
+# View summary
+python view_summary.py
+
+# Check recent activity
+python view_summary.py --activity 24
+
+# View Docker logs
+docker-compose logs -f
+```
+
+## 📊 How It Works
+
+1. **Discovery**: Reads your `crypto_project` collection
+2. **Extraction**: Finds GitHub URLs in `links.repos_url.github`
+3. **Collection**: Gathers metrics every hour (configurable)
+4. **Storage**: Saves to time series with `coin_id` reference
+5. **Aggregation**: Creates daily summaries for charts
+6. **API Ready**: Provides chart-formatted JSON for your backend
+
+## 🚨 Troubleshooting
+
+- **Rate Limits**: The collector uses smart rate limiting (80% buffer)
+- **Memory Usage**: Docker container is limited to reasonable resources
+- **Connection Issues**: Check MongoDB URI and GitHub token
+- **Missing Data**: Verify repositories exist and are public
+
+For detailed troubleshooting, see [EC2 Docker Setup](EC2_DOCKER_SETUP.md#troubleshooting).
