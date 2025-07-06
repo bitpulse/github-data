@@ -1,0 +1,3938 @@
+{
+  "bitcoin": {
+    "project_info": {
+      "coin_id": "bitcoin",
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "developer_data": {
+        "forks": 36426,
+        "stars": 73168,
+        "subscribers": 3967,
+        "total_issues": 7743,
+        "closed_issues": 7380,
+        "pull_requests_merged": 11215,
+        "pull_request_contributors": 846,
+        "code_additions_deletions_4_weeks": {
+          "additions": 1570,
+          "deletions": -1948
+        },
+        "commit_count_4_weeks": 108,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "bitcoin",
+        "name": "bitcoin",
+        "url": "https://github.com/bitcoin/bitcoin",
+        "coin_id": "bitcoin",
+        "project_name": "Bitcoin",
+        "symbol": "BTC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "bitcoin",
+        "name": "bips",
+        "url": "https://github.com/bitcoin/bips",
+        "coin_id": "bitcoin",
+        "project_name": "Bitcoin",
+        "symbol": "BTC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "ethereum": {
+    "project_info": {
+      "coin_id": "ethereum",
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "developer_data": {
+        "forks": 19618,
+        "stars": 44422,
+        "subscribers": 2195,
+        "total_issues": 7683,
+        "closed_issues": 7427,
+        "pull_requests_merged": 5779,
+        "pull_request_contributors": 906,
+        "code_additions_deletions_4_weeks": {
+          "additions": 23340,
+          "deletions": -2460
+        },
+        "commit_count_4_weeks": 41,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "ethereum",
+        "name": "go-ethereum",
+        "url": "https://github.com/ethereum/go-ethereum",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "ethereum",
+        "name": "py-evm",
+        "url": "https://github.com/ethereum/py-evm",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ethereum",
+        "name": "aleth",
+        "url": "https://github.com/ethereum/aleth",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ethereum",
+        "name": "web3.py",
+        "url": "https://github.com/ethereum/web3.py",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ethereum",
+        "name": "solidity",
+        "url": "https://github.com/ethereum/solidity",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ethereum",
+        "name": "shardin",
+        "url": "https://github.com/ethereum/sharding",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ethereum",
+        "name": "casper",
+        "url": "https://github.com/ethereum/casper",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "paritytech",
+        "name": "parity",
+        "url": "https://github.com/paritytech/parity",
+        "coin_id": "ethereum",
+        "project_name": "Ethereum",
+        "symbol": "ETH",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "binancecoin": {
+    "project_info": {
+      "coin_id": "binancecoin",
+      "name": "BNB",
+      "symbol": "BNB",
+      "developer_data": {
+        "forks": 2054,
+        "stars": 4170,
+        "subscribers": 473,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 55,
+        "pull_request_contributors": 26,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "binance-exchange",
+        "name": "binance-official-api-docs",
+        "url": "https://github.com/binance-exchange/binance-official-api-docs",
+        "coin_id": "binancecoin",
+        "project_name": "BNB",
+        "symbol": "BNB",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "binance-exchange",
+        "name": "node-binance-ap",
+        "url": "https://github.com/binance-exchange/node-binance-api",
+        "coin_id": "binancecoin",
+        "project_name": "BNB",
+        "symbol": "BNB",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "binance-exchange",
+        "name": "php-binance-ap",
+        "url": "https://github.com/binance-exchange/php-binance-api",
+        "coin_id": "binancecoin",
+        "project_name": "BNB",
+        "symbol": "BNB",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "solana": {
+    "project_info": {
+      "coin_id": "solana",
+      "name": "Solana",
+      "symbol": "SOL",
+      "developer_data": {
+        "forks": 3516,
+        "stars": 11071,
+        "subscribers": 276,
+        "total_issues": 5177,
+        "closed_issues": 4611,
+        "pull_requests_merged": 23614,
+        "pull_request_contributors": 411,
+        "code_additions_deletions_4_weeks": {
+          "additions": 10193,
+          "deletions": -5277
+        },
+        "commit_count_4_weeks": 171,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "solana-labs",
+        "name": "solana",
+        "url": "https://github.com/solana-labs/solana",
+        "coin_id": "solana",
+        "project_name": "Solana",
+        "symbol": "SOL",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "ripple": {
+    "project_info": {
+      "coin_id": "ripple",
+      "name": "XRP",
+      "symbol": "XRP",
+      "developer_data": {
+        "forks": 1525,
+        "stars": 4384,
+        "subscribers": 506,
+        "total_issues": 1304,
+        "closed_issues": 992,
+        "pull_requests_merged": 646,
+        "pull_request_contributors": 62,
+        "code_additions_deletions_4_weeks": {
+          "additions": 306,
+          "deletions": -966
+        },
+        "commit_count_4_weeks": 4,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "ripple",
+        "name": "rippled",
+        "url": "https://github.com/ripple/rippled",
+        "coin_id": "ripple",
+        "project_name": "XRP",
+        "symbol": "XRP",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "ripple",
+        "name": "ripple-lib",
+        "url": "https://github.com/ripple/ripple-lib",
+        "coin_id": "ripple",
+        "project_name": "XRP",
+        "symbol": "XRP",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "cardano": {
+    "project_info": {
+      "coin_id": "cardano",
+      "name": "Cardano",
+      "symbol": "ADA",
+      "developer_data": {
+        "forks": 643,
+        "stars": 3757,
+        "subscribers": 465,
+        "total_issues": 849,
+        "closed_issues": 665,
+        "pull_requests_merged": 1706,
+        "pull_request_contributors": 80,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "input-output-hk",
+        "name": "cardano-sl",
+        "url": "https://github.com/input-output-hk/cardano-sl",
+        "coin_id": "cardano",
+        "project_name": "Cardano",
+        "symbol": "ADA",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "input-output-hk",
+        "name": "js-cardano-wasm",
+        "url": "https://github.com/input-output-hk/js-cardano-wasm",
+        "coin_id": "cardano",
+        "project_name": "Cardano",
+        "symbol": "ADA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "input-output-hk",
+        "name": "plutus",
+        "url": "https://github.com/input-output-hk/plutus",
+        "coin_id": "cardano",
+        "project_name": "Cardano",
+        "symbol": "ADA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "input-output-hk",
+        "name": "rust-cardano",
+        "url": "https://github.com/input-output-hk/rust-cardano",
+        "coin_id": "cardano",
+        "project_name": "Cardano",
+        "symbol": "ADA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "input-output-hk",
+        "name": "cardano-chain",
+        "url": "https://github.com/input-output-hk/cardano-chain",
+        "coin_id": "cardano",
+        "project_name": "Cardano",
+        "symbol": "ADA",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "dogecoin": {
+    "project_info": {
+      "coin_id": "dogecoin",
+      "name": "Dogecoin",
+      "symbol": "DOGE",
+      "developer_data": {
+        "forks": 2844,
+        "stars": 14334,
+        "subscribers": 848,
+        "total_issues": 1190,
+        "closed_issues": 1038,
+        "pull_requests_merged": 1230,
+        "pull_request_contributors": 161,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "dogecoin",
+        "name": "dogecoin",
+        "url": "https://github.com/dogecoin/dogecoin",
+        "coin_id": "dogecoin",
+        "project_name": "Dogecoin",
+        "symbol": "DOGE",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "dogecoin",
+        "name": "libdohj",
+        "url": "https://github.com/dogecoin/libdohj",
+        "coin_id": "dogecoin",
+        "project_name": "Dogecoin",
+        "symbol": "DOGE",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "avalanche-2": {
+    "project_info": {
+      "coin_id": "avalanche-2",
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "developer_data": {
+        "forks": 655,
+        "stars": 2100,
+        "subscribers": 127,
+        "total_issues": 767,
+        "closed_issues": 629,
+        "pull_requests_merged": 1544,
+        "pull_request_contributors": 75,
+        "code_additions_deletions_4_weeks": {
+          "additions": 5437,
+          "deletions": -4061
+        },
+        "commit_count_4_weeks": 50,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "ava-labs",
+        "name": "avalanchego",
+        "url": "https://github.com/ava-labs/avalanchego",
+        "coin_id": "avalanche-2",
+        "project_name": "Avalanche",
+        "symbol": "AVAX",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "polkadot": {
+    "project_info": {
+      "coin_id": "polkadot",
+      "name": "Polkadot",
+      "symbol": "DOT",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "paritytech",
+        "name": "polkadot-sdk",
+        "url": "https://github.com/paritytech/polkadot-sdk",
+        "coin_id": "polkadot",
+        "project_name": "Polkadot",
+        "symbol": "DOT",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "matic-network": {
+    "project_info": {
+      "coin_id": "matic-network",
+      "name": "Polygon",
+      "symbol": "MATIC",
+      "developer_data": {
+        "forks": 512,
+        "stars": 1167,
+        "subscribers": 74,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 274,
+        "pull_request_contributors": 24,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "maticnetwork",
+        "name": "contracts",
+        "url": "https://github.com/maticnetwork/contracts",
+        "coin_id": "matic-network",
+        "project_name": "Polygon",
+        "symbol": "MATIC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "maticnetwork",
+        "name": "heimdall",
+        "url": "https://github.com/maticnetwork/heimdall",
+        "coin_id": "matic-network",
+        "project_name": "Polygon",
+        "symbol": "MATIC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "maticnetwork",
+        "name": "matic.js",
+        "url": "https://github.com/maticnetwork/matic.js",
+        "coin_id": "matic-network",
+        "project_name": "Polygon",
+        "symbol": "MATIC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "maticnetwork",
+        "name": "eth-dagger.js",
+        "url": "https://github.com/maticnetwork/eth-dagger.js",
+        "coin_id": "matic-network",
+        "project_name": "Polygon",
+        "symbol": "MATIC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "maticnetwork",
+        "name": "sol-trace",
+        "url": "https://github.com/maticnetwork/sol-trace",
+        "coin_id": "matic-network",
+        "project_name": "Polygon",
+        "symbol": "MATIC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "chainlink": {
+    "project_info": {
+      "coin_id": "chainlink",
+      "name": "Chainlink",
+      "symbol": "LINK",
+      "developer_data": {
+        "forks": 1538,
+        "stars": 5703,
+        "subscribers": 304,
+        "total_issues": 417,
+        "closed_issues": 349,
+        "pull_requests_merged": 8258,
+        "pull_request_contributors": 173,
+        "code_additions_deletions_4_weeks": {
+          "additions": 14978,
+          "deletions": -9282
+        },
+        "commit_count_4_weeks": 87,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "smartcontractkit",
+        "name": "chainlink",
+        "url": "https://github.com/smartcontractkit/chainlink",
+        "coin_id": "chainlink",
+        "project_name": "Chainlink",
+        "symbol": "LINK",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "smartcontractkit",
+        "name": "chainlink-ruby",
+        "url": "https://github.com/smartcontractkit/chainlink-ruby",
+        "coin_id": "chainlink",
+        "project_name": "Chainlink",
+        "symbol": "LINK",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "uniswap": {
+    "project_info": {
+      "coin_id": "uniswap",
+      "name": "Uniswap",
+      "symbol": "UNI",
+      "developer_data": {
+        "forks": 2873,
+        "stars": 4683,
+        "subscribers": 141,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 214,
+        "pull_request_contributors": 11,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Uniswap",
+        "name": "uniswap-v3-core",
+        "url": "https://github.com/Uniswap/uniswap-v3-core",
+        "coin_id": "uniswap",
+        "project_name": "Uniswap",
+        "symbol": "UNI",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "litecoin": {
+    "project_info": {
+      "coin_id": "litecoin",
+      "name": "Litecoin",
+      "symbol": "LTC",
+      "developer_data": {
+        "forks": 3059,
+        "stars": 4266,
+        "subscribers": 508,
+        "total_issues": 531,
+        "closed_issues": 462,
+        "pull_requests_merged": 119,
+        "pull_request_contributors": 48,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 1,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "litecoin-project",
+        "name": "litecoin",
+        "url": "https://github.com/litecoin-project/litecoin",
+        "coin_id": "litecoin",
+        "project_name": "Litecoin",
+        "symbol": "LTC",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "cosmos": {
+    "project_info": {
+      "coin_id": "cosmos",
+      "name": "Cosmos Hub",
+      "symbol": "ATOM",
+      "developer_data": {
+        "forks": 321,
+        "stars": 1292,
+        "subscribers": 148,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 39,
+        "pull_request_contributors": 21,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "cosmos",
+        "name": "cosmos",
+        "url": "https://github.com/cosmos/cosmos",
+        "coin_id": "cosmos",
+        "project_name": "Cosmos Hub",
+        "symbol": "ATOM",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "cosmos",
+        "name": "cosmos-sdk",
+        "url": "https://github.com/cosmos/cosmos-sdk",
+        "coin_id": "cosmos",
+        "project_name": "Cosmos Hub",
+        "symbol": "ATOM",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "cosmos",
+        "name": "voyager",
+        "url": "https://github.com/cosmos/voyager",
+        "coin_id": "cosmos",
+        "project_name": "Cosmos Hub",
+        "symbol": "ATOM",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "internet-computer": {
+    "project_info": {
+      "coin_id": "internet-computer",
+      "name": "Internet Computer",
+      "symbol": "ICP",
+      "developer_data": {
+        "forks": 280,
+        "stars": 1399,
+        "subscribers": 65,
+        "total_issues": 148,
+        "closed_issues": 104,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": 55572,
+          "deletions": -36372
+        },
+        "commit_count_4_weeks": 567,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "dfinity",
+        "name": "ic",
+        "url": "https://github.com/dfinity/ic",
+        "coin_id": "internet-computer",
+        "project_name": "Internet Computer",
+        "symbol": "ICP",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "ethereum-classic": {
+    "project_info": {
+      "coin_id": "ethereum-classic",
+      "name": "Ethereum Classic",
+      "symbol": "ETC",
+      "developer_data": {
+        "forks": 234,
+        "stars": 183,
+        "subscribers": 38,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 145,
+        "pull_request_contributors": 16,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "ethereumclassic",
+        "name": "ethereumclassic.github.io",
+        "url": "https://github.com/ethereumclassic/ethereumclassic.github.io",
+        "coin_id": "ethereum-classic",
+        "project_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "multi-geth",
+        "name": "multi-geth",
+        "url": "https://github.com/multi-geth/multi-geth",
+        "coin_id": "ethereum-classic",
+        "project_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "openethereum",
+        "name": "openethereum",
+        "url": "https://github.com/openethereum/openethereum",
+        "coin_id": "ethereum-classic",
+        "project_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "hyperledger",
+        "name": "besu",
+        "url": "https://github.com/hyperledger/besu",
+        "coin_id": "ethereum-classic",
+        "project_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "etclabscore",
+        "name": "core-geth",
+        "url": "https://github.com/etclabscore/core-geth",
+        "coin_id": "ethereum-classic",
+        "project_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ethereumclassic",
+        "name": "ECIPs",
+        "url": "https://github.com/ethereumclassic/ECIPs",
+        "coin_id": "ethereum-classic",
+        "project_name": "Ethereum Classic",
+        "symbol": "ETC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "filecoin": {
+    "project_info": {
+      "coin_id": "filecoin",
+      "name": "Filecoin",
+      "symbol": "FIL",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "filecoin-project",
+        "name": "lotus",
+        "url": "https://github.com/filecoin-project/lotus",
+        "coin_id": "filecoin",
+        "project_name": "Filecoin",
+        "symbol": "FIL",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "stellar": {
+    "project_info": {
+      "coin_id": "stellar",
+      "name": "Stellar",
+      "symbol": "XLM",
+      "developer_data": {
+        "forks": 969,
+        "stars": 3118,
+        "subscribers": 269,
+        "total_issues": 1709,
+        "closed_issues": 1445,
+        "pull_requests_merged": 1777,
+        "pull_request_contributors": 84,
+        "code_additions_deletions_4_weeks": {
+          "additions": 63083,
+          "deletions": -16948
+        },
+        "commit_count_4_weeks": 86,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "stellar",
+        "name": "stellar-core",
+        "url": "https://github.com/stellar/stellar-core",
+        "coin_id": "stellar",
+        "project_name": "Stellar",
+        "symbol": "XLM",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "stellar",
+        "name": "js-stellar-sdk",
+        "url": "https://github.com/stellar/js-stellar-sdk",
+        "coin_id": "stellar",
+        "project_name": "Stellar",
+        "symbol": "XLM",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "stellar",
+        "name": "go",
+        "url": "https://github.com/stellar/go",
+        "coin_id": "stellar",
+        "project_name": "Stellar",
+        "symbol": "XLM",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "stellar",
+        "name": "stellar-protocol",
+        "url": "https://github.com/stellar/stellar-protocol",
+        "coin_id": "stellar",
+        "project_name": "Stellar",
+        "symbol": "XLM",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "near": {
+    "project_info": {
+      "coin_id": "near",
+      "name": "NEAR Protocol",
+      "symbol": "NEAR",
+      "developer_data": {
+        "forks": 716,
+        "stars": 2462,
+        "subscribers": 79,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 7485,
+        "pull_request_contributors": 186,
+        "code_additions_deletions_4_weeks": {
+          "additions": 8994,
+          "deletions": -15764
+        },
+        "commit_count_4_weeks": 103,
+        "last_4_weeks_commit_activity_series": [
+          0,
+          1,
+          3,
+          6,
+          3,
+          4,
+          0,
+          0,
+          2,
+          2,
+          5,
+          4,
+          5,
+          1,
+          0,
+          4,
+          5,
+          4,
+          13,
+          4,
+          2,
+          0,
+          7,
+          8,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "repositories": [
+      {
+        "owner": "nearprotocol",
+        "name": "nearcore",
+        "url": "https://github.com/nearprotocol/nearcore",
+        "coin_id": "near",
+        "project_name": "NEAR Protocol",
+        "symbol": "NEAR",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "nearprotocol",
+        "name": "near-walle",
+        "url": "https://github.com/nearprotocol/near-wallet",
+        "coin_id": "near",
+        "project_name": "NEAR Protocol",
+        "symbol": "NEAR",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "nearprotocol",
+        "name": "nearlib",
+        "url": "https://github.com/nearprotocol/nearlib",
+        "coin_id": "near",
+        "project_name": "NEAR Protocol",
+        "symbol": "NEAR",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "algorand": {
+    "project_info": {
+      "coin_id": "algorand",
+      "name": "Algorand",
+      "symbol": "ALGO",
+      "developer_data": {
+        "forks": 499,
+        "stars": 1402,
+        "subscribers": 73,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 3740,
+        "pull_request_contributors": 111,
+        "code_additions_deletions_4_weeks": {
+          "additions": 6470,
+          "deletions": -5388
+        },
+        "commit_count_4_weeks": 17,
+        "last_4_weeks_commit_activity_series": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          4,
+          1,
+          0,
+          2,
+          0,
+          0,
+          1,
+          1,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          2,
+          4,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "repositories": [
+      {
+        "owner": "algorand",
+        "name": "go-algorand",
+        "url": "https://github.com/algorand/go-algorand",
+        "coin_id": "algorand",
+        "project_name": "Algorand",
+        "symbol": "ALGO",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "algorand",
+        "name": "java-algorand-sdk",
+        "url": "https://github.com/algorand/java-algorand-sdk",
+        "coin_id": "algorand",
+        "project_name": "Algorand",
+        "symbol": "ALGO",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "algorand",
+        "name": "js-algorand-sdk",
+        "url": "https://github.com/algorand/js-algorand-sdk",
+        "coin_id": "algorand",
+        "project_name": "Algorand",
+        "symbol": "ALGO",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "algorand",
+        "name": "go-algorand-sdk",
+        "url": "https://github.com/algorand/go-algorand-sdk",
+        "coin_id": "algorand",
+        "project_name": "Algorand",
+        "symbol": "ALGO",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "vechain": {
+    "project_info": {
+      "coin_id": "vechain",
+      "name": "VeChain",
+      "symbol": "VET",
+      "developer_data": {
+        "forks": 258,
+        "stars": 802,
+        "subscribers": 126,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 752,
+        "pull_request_contributors": 33,
+        "code_additions_deletions_4_weeks": {
+          "additions": 351,
+          "deletions": -244
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "vechain",
+        "name": "thor",
+        "url": "https://github.com/vechain/thor",
+        "coin_id": "vechain",
+        "project_name": "VeChain",
+        "symbol": "VET",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "vechain",
+        "name": "web3-gear",
+        "url": "https://github.com/vechain/web3-gear",
+        "coin_id": "vechain",
+        "project_name": "VeChain",
+        "symbol": "VET",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "vechain",
+        "name": "thor-devkit.js",
+        "url": "https://github.com/vechain/thor-devkit.js",
+        "coin_id": "vechain",
+        "project_name": "VeChain",
+        "symbol": "VET",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "vechain",
+        "name": "thorify",
+        "url": "https://github.com/vechain/thorify",
+        "coin_id": "vechain",
+        "project_name": "VeChain",
+        "symbol": "VET",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "aave": {
+    "project_info": {
+      "coin_id": "aave",
+      "name": "Aave",
+      "symbol": "AAVE",
+      "developer_data": {
+        "forks": 565,
+        "stars": 1409,
+        "subscribers": 107,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 4,
+        "pull_request_contributors": 2,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "repositories": [
+      {
+        "owner": "aave",
+        "name": "aave-protocol",
+        "url": "https://github.com/aave/aave-protocol",
+        "coin_id": "aave",
+        "project_name": "Aave",
+        "symbol": "AAVE",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "quant-network": {
+    "project_info": {
+      "coin_id": "quant-network",
+      "name": "Quant",
+      "symbol": "QNT",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "quantnetwork",
+        "name": "Overledger-Interfaces",
+        "url": "https://github.com/quantnetwork/Overledger-Interfaces",
+        "coin_id": "quant-network",
+        "project_name": "Quant",
+        "symbol": "QNT",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "quantnetwork",
+        "name": "eth-contract-metadata",
+        "url": "https://github.com/quantnetwork/eth-contract-metadata",
+        "coin_id": "quant-network",
+        "project_name": "Quant",
+        "symbol": "QNT",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "fantom": {
+    "project_info": {
+      "coin_id": "fantom",
+      "name": "Fantom",
+      "symbol": "FTM",
+      "developer_data": {
+        "forks": 80,
+        "stars": 224,
+        "subscribers": 25,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 421,
+        "pull_request_contributors": 23,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Fantom-foundation",
+        "name": "go-lachesis",
+        "url": "https://github.com/Fantom-foundation/go-lachesis",
+        "coin_id": "fantom",
+        "project_name": "Fantom",
+        "symbol": "FTM",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "the-sandbox": {
+    "project_info": {
+      "coin_id": "the-sandbox",
+      "name": "The Sandbox",
+      "symbol": "SAND",
+      "developer_data": {
+        "forks": 90,
+        "stars": 181,
+        "subscribers": 20,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1392,
+        "pull_request_contributors": 30,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 25,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "thesandboxgame",
+        "name": "sandbox-smart-contracts",
+        "url": "https://github.com/thesandboxgame/sandbox-smart-contracts",
+        "coin_id": "the-sandbox",
+        "project_name": "The Sandbox",
+        "symbol": "SAND",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "decentraland": {
+    "project_info": {
+      "coin_id": "decentraland",
+      "name": "Decentraland",
+      "symbol": "MANA",
+      "developer_data": {
+        "forks": 689,
+        "stars": 1176,
+        "subscribers": 57,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 787,
+        "pull_request_contributors": 20,
+        "code_additions_deletions_4_weeks": {
+          "additions": 53,
+          "deletions": -6
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "decentraland",
+        "name": "marketplace",
+        "url": "https://github.com/decentraland/marketplace",
+        "coin_id": "decentraland",
+        "project_name": "Decentraland",
+        "symbol": "MANA",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "decentraland",
+        "name": "cl",
+        "url": "https://github.com/decentraland/cli",
+        "coin_id": "decentraland",
+        "project_name": "Decentraland",
+        "symbol": "MANA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "decentraland",
+        "name": "land-auction",
+        "url": "https://github.com/decentraland/land-auction",
+        "coin_id": "decentraland",
+        "project_name": "Decentraland",
+        "symbol": "MANA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "decentraland",
+        "name": "mana",
+        "url": "https://github.com/decentraland/mana",
+        "coin_id": "decentraland",
+        "project_name": "Decentraland",
+        "symbol": "MANA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "decentraland",
+        "name": "decentraland-dapps",
+        "url": "https://github.com/decentraland/decentraland-dapps",
+        "coin_id": "decentraland",
+        "project_name": "Decentraland",
+        "symbol": "MANA",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "tezos": {
+    "project_info": {
+      "coin_id": "tezos",
+      "name": "Tezos",
+      "symbol": "XTZ",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "tezos",
+        "name": "tezos-mirror",
+        "url": "https://github.com/tezos/tezos-mirror",
+        "coin_id": "tezos",
+        "project_name": "Tezos",
+        "symbol": "XTZ",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "tezos",
+        "name": "tezos",
+        "url": "https://github.com/tezos/tezos",
+        "coin_id": "tezos",
+        "project_name": "Tezos",
+        "symbol": "XTZ",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "theta-token": {
+    "project_info": {
+      "coin_id": "theta-token",
+      "name": "Theta Network",
+      "symbol": "THETA",
+      "developer_data": {
+        "forks": 87,
+        "stars": 368,
+        "subscribers": 58,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 123,
+        "pull_request_contributors": 10,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "thetatoken",
+        "name": "theta-protocol-ledger",
+        "url": "https://github.com/thetatoken/theta-protocol-ledger",
+        "coin_id": "theta-token",
+        "project_name": "Theta Network",
+        "symbol": "THETA",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "thetatoken",
+        "name": "theta-protocol-delivery-lib",
+        "url": "https://github.com/thetatoken/theta-protocol-delivery-lib",
+        "coin_id": "theta-token",
+        "project_name": "Theta Network",
+        "symbol": "THETA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "thetatoken",
+        "name": "theta-infrastructure-ledger-explorer",
+        "url": "https://github.com/thetatoken/theta-infrastructure-ledger-explorer",
+        "coin_id": "theta-token",
+        "project_name": "Theta Network",
+        "symbol": "THETA",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "thetatoken",
+        "name": "theta-infrastructure-vaul",
+        "url": "https://github.com/thetatoken/theta-infrastructure-vault",
+        "coin_id": "theta-token",
+        "project_name": "Theta Network",
+        "symbol": "THETA",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "eos": {
+    "project_info": {
+      "coin_id": "eos",
+      "name": "EOS",
+      "symbol": "EOS",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "eosnetworkfoundation",
+        "name": "eos-evm-contrac",
+        "url": "https://github.com/eosnetworkfoundation/eos-evm-contract",
+        "coin_id": "eos",
+        "project_name": "EOS",
+        "symbol": "EOS",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "maker": {
+    "project_info": {
+      "coin_id": "maker",
+      "name": "Maker",
+      "symbol": "MKR",
+      "developer_data": {
+        "forks": 519,
+        "stars": 862,
+        "subscribers": 28,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 231,
+        "pull_request_contributors": 28,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "makerdao",
+        "name": "multicall",
+        "url": "https://github.com/makerdao/multicall",
+        "coin_id": "maker",
+        "project_name": "Maker",
+        "symbol": "MKR",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "makerdao",
+        "name": "dai.js",
+        "url": "https://github.com/makerdao/dai.js",
+        "coin_id": "maker",
+        "project_name": "Maker",
+        "symbol": "MKR",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "thorchain": {
+    "project_info": {
+      "coin_id": "thorchain",
+      "name": "THORChain",
+      "symbol": "RUNE",
+      "developer_data": {
+        "forks": 29,
+        "stars": 76,
+        "subscribers": 17,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 15,
+        "pull_request_contributors": 9,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "thorchain",
+        "name": "Resources",
+        "url": "https://github.com/thorchain/Resources",
+        "coin_id": "thorchain",
+        "project_name": "THORChain",
+        "symbol": "RUNE",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "thorchain",
+        "name": "instaswap-sdk",
+        "url": "https://github.com/thorchain/instaswap-sdk",
+        "coin_id": "thorchain",
+        "project_name": "THORChain",
+        "symbol": "RUNE",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "thorchain",
+        "name": "THORChain",
+        "url": "https://github.com/thorchain/THORChain",
+        "coin_id": "thorchain",
+        "project_name": "THORChain",
+        "symbol": "RUNE",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "havven": {
+    "project_info": {
+      "coin_id": "havven",
+      "name": "Synthetix Network",
+      "symbol": "SNX",
+      "developer_data": {
+        "forks": 608,
+        "stars": 1255,
+        "subscribers": 53,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1709,
+        "pull_request_contributors": 47,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Synthetixio",
+        "name": "synthetix",
+        "url": "https://github.com/Synthetixio/synthetix",
+        "coin_id": "havven",
+        "project_name": "Synthetix Network",
+        "symbol": "SNX",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "Synthetixio",
+        "name": "synthetix-js",
+        "url": "https://github.com/Synthetixio/synthetix-js",
+        "coin_id": "havven",
+        "project_name": "Synthetix Network",
+        "symbol": "SNX",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "zcash": {
+    "project_info": {
+      "coin_id": "zcash",
+      "name": "Zcash",
+      "symbol": "ZEC",
+      "developer_data": {
+        "forks": 2073,
+        "stars": 4811,
+        "subscribers": 374,
+        "total_issues": 3788,
+        "closed_issues": 2818,
+        "pull_requests_merged": 1812,
+        "pull_request_contributors": 102,
+        "code_additions_deletions_4_weeks": {
+          "additions": 2200,
+          "deletions": -1033
+        },
+        "commit_count_4_weeks": 34,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "zcash",
+        "name": "zcash",
+        "url": "https://github.com/zcash/zcash",
+        "coin_id": "zcash",
+        "project_name": "Zcash",
+        "symbol": "ZEC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "zcash",
+        "name": "librustzcash",
+        "url": "https://github.com/zcash/librustzcash",
+        "coin_id": "zcash",
+        "project_name": "Zcash",
+        "symbol": "ZEC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "waves": {
+    "project_info": {
+      "coin_id": "waves",
+      "name": "Waves",
+      "symbol": "WAVES",
+      "developer_data": {
+        "forks": 447,
+        "stars": 1175,
+        "subscribers": 182,
+        "total_issues": 364,
+        "closed_issues": 344,
+        "pull_requests_merged": 3231,
+        "pull_request_contributors": 58,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "waves-enterprise",
+        "name": "WE-releases",
+        "url": "https://github.com/waves-enterprise/WE-releases",
+        "coin_id": "waves",
+        "project_name": "Waves",
+        "symbol": "WAVES",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "wavesplatform",
+        "name": "WavesWallet-iOS",
+        "url": "https://github.com/wavesplatform/WavesWallet-iOS",
+        "coin_id": "waves",
+        "project_name": "Waves",
+        "symbol": "WAVES",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "wavesplatform",
+        "name": "WavesCS",
+        "url": "https://github.com/wavesplatform/WavesCS",
+        "coin_id": "waves",
+        "project_name": "Waves",
+        "symbol": "WAVES",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "wavesplatform",
+        "name": "WavesGUI",
+        "url": "https://github.com/wavesplatform/WavesGUI",
+        "coin_id": "waves",
+        "project_name": "Waves",
+        "symbol": "WAVES",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "wavesplatform",
+        "name": "Waves",
+        "url": "https://github.com/wavesplatform/Waves",
+        "coin_id": "waves",
+        "project_name": "Waves",
+        "symbol": "WAVES",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "dash": {
+    "project_info": {
+      "coin_id": "dash",
+      "name": "Dash",
+      "symbol": "DASH",
+      "developer_data": {
+        "forks": 43,
+        "stars": 76,
+        "subscribers": 16,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1909,
+        "pull_request_contributors": 26,
+        "code_additions_deletions_4_weeks": {
+          "additions": 116895,
+          "deletions": -25970
+        },
+        "commit_count_4_weeks": 26,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "dashpay",
+        "name": "tenderdash",
+        "url": "https://github.com/dashpay/tenderdash",
+        "coin_id": "dash",
+        "project_name": "Dash",
+        "symbol": "DASH",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "dashpay",
+        "name": "dash",
+        "url": "https://github.com/dashpay/dash",
+        "coin_id": "dash",
+        "project_name": "Dash",
+        "symbol": "DASH",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "dashpay",
+        "name": "platform",
+        "url": "https://github.com/dashpay/platform",
+        "coin_id": "dash",
+        "project_name": "Dash",
+        "symbol": "DASH",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "basic-attention-token": {
+    "project_info": {
+      "coin_id": "basic-attention-token",
+      "name": "Basic Attention",
+      "symbol": "BAT",
+      "developer_data": {
+        "forks": 44,
+        "stars": 65,
+        "subscribers": 18,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 2961,
+        "pull_request_contributors": 52,
+        "code_additions_deletions_4_weeks": {
+          "additions": 2734,
+          "deletions": -2382
+        },
+        "commit_count_4_weeks": 53,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "brave-intl",
+        "name": "publishers",
+        "url": "https://github.com/brave-intl/publishers",
+        "coin_id": "basic-attention-token",
+        "project_name": "Basic Attention",
+        "symbol": "BAT",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "brave-intl",
+        "name": "bat-native-ledger",
+        "url": "https://github.com/brave-intl/bat-native-ledger",
+        "coin_id": "basic-attention-token",
+        "project_name": "Basic Attention",
+        "symbol": "BAT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "brave-intl",
+        "name": "bat-ledger",
+        "url": "https://github.com/brave-intl/bat-ledger",
+        "coin_id": "basic-attention-token",
+        "project_name": "Basic Attention",
+        "symbol": "BAT",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "curve-dao-token": {
+    "project_info": {
+      "coin_id": "curve-dao-token",
+      "name": "Curve DAO",
+      "symbol": "CRV",
+      "developer_data": {
+        "forks": 399,
+        "stars": 1061,
+        "subscribers": 55,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 105,
+        "pull_request_contributors": 13,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 2,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "curvefi",
+        "name": "curve-contrac",
+        "url": "https://github.com/curvefi/curve-contract",
+        "coin_id": "curve-dao-token",
+        "project_name": "Curve DAO",
+        "symbol": "CRV",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "curvefi",
+        "name": "curve-vue",
+        "url": "https://github.com/curvefi/curve-vue",
+        "coin_id": "curve-dao-token",
+        "project_name": "Curve DAO",
+        "symbol": "CRV",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "enjincoin": {
+    "project_info": {
+      "coin_id": "enjincoin",
+      "name": "Enjin Coin",
+      "symbol": "ENJ",
+      "developer_data": {
+        "forks": 204,
+        "stars": 424,
+        "subscribers": 33,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 18,
+        "pull_request_contributors": 11,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "enjin",
+        "name": "erc-1155",
+        "url": "https://github.com/enjin/erc-1155",
+        "coin_id": "enjincoin",
+        "project_name": "Enjin Coin",
+        "symbol": "ENJ",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "zilliqa": {
+    "project_info": {
+      "coin_id": "zilliqa",
+      "name": "Zilliqa",
+      "symbol": "ZIL",
+      "developer_data": {
+        "forks": 287,
+        "stars": 1129,
+        "subscribers": 105,
+        "total_issues": 374,
+        "closed_issues": 278,
+        "pull_requests_merged": 3032,
+        "pull_request_contributors": 62,
+        "code_additions_deletions_4_weeks": {
+          "additions": 889,
+          "deletions": -256
+        },
+        "commit_count_4_weeks": 12,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Zilliqa",
+        "name": "Zilliqa",
+        "url": "https://github.com/Zilliqa/Zilliqa",
+        "coin_id": "zilliqa",
+        "project_name": "Zilliqa",
+        "symbol": "ZIL",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "Zilliqa",
+        "name": "Zilliqa-JavaScript-Library",
+        "url": "https://github.com/Zilliqa/Zilliqa-JavaScript-Library",
+        "coin_id": "zilliqa",
+        "project_name": "Zilliqa",
+        "symbol": "ZIL",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Zilliqa",
+        "name": "Zilliqa-Walle",
+        "url": "https://github.com/Zilliqa/Zilliqa-Wallet",
+        "coin_id": "zilliqa",
+        "project_name": "Zilliqa",
+        "symbol": "ZIL",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Zilliqa",
+        "name": "scilla",
+        "url": "https://github.com/Zilliqa/scilla",
+        "coin_id": "zilliqa",
+        "project_name": "Zilliqa",
+        "symbol": "ZIL",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "harmony": {
+    "project_info": {
+      "coin_id": "harmony",
+      "name": "Harmony",
+      "symbol": "ONE",
+      "developer_data": {
+        "forks": 294,
+        "stars": 1464,
+        "subscribers": 89,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 2980,
+        "pull_request_contributors": 82,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 1,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "harmony-one",
+        "name": "harmony",
+        "url": "https://github.com/harmony-one/harmony",
+        "coin_id": "harmony",
+        "project_name": "Harmony",
+        "symbol": "ONE",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "harmony-one",
+        "name": "libunison",
+        "url": "https://github.com/harmony-one/libunison",
+        "coin_id": "harmony",
+        "project_name": "Harmony",
+        "symbol": "ONE",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "holotoken": {
+    "project_info": {
+      "coin_id": "holotoken",
+      "name": "Holo",
+      "symbol": "HOT",
+      "developer_data": {
+        "forks": 282,
+        "stars": 1033,
+        "subscribers": 130,
+        "total_issues": 552,
+        "closed_issues": 302,
+        "pull_requests_merged": 1310,
+        "pull_request_contributors": 48,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "holochain",
+        "name": "holochain-rus",
+        "url": "https://github.com/holochain/holochain-rust",
+        "coin_id": "holotoken",
+        "project_name": "Holo",
+        "symbol": "HOT",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "holochain",
+        "name": "holosqape",
+        "url": "https://github.com/holochain/holosqape",
+        "coin_id": "holotoken",
+        "project_name": "Holo",
+        "symbol": "HOT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Holo-Host",
+        "name": "holo-nixpkgs",
+        "url": "https://github.com/Holo-Host/holo-nixpkgs",
+        "coin_id": "holotoken",
+        "project_name": "Holo",
+        "symbol": "HOT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Holochain",
+        "name": "holochain-proto",
+        "url": "https://github.com/Holochain/holochain-proto",
+        "coin_id": "holotoken",
+        "project_name": "Holo",
+        "symbol": "HOT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "holochain",
+        "name": "holochain-u",
+        "url": "https://github.com/holochain/holochain-ui",
+        "coin_id": "holotoken",
+        "project_name": "Holo",
+        "symbol": "HOT",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "ravencoin": {
+    "project_info": {
+      "coin_id": "ravencoin",
+      "name": "Ravencoin",
+      "symbol": "RVN",
+      "developer_data": {
+        "forks": 648,
+        "stars": 1054,
+        "subscribers": 212,
+        "total_issues": 497,
+        "closed_issues": 351,
+        "pull_requests_merged": 544,
+        "pull_request_contributors": 53,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "RavenProject",
+        "name": "Ravencoin",
+        "url": "https://github.com/RavenProject/Ravencoin",
+        "coin_id": "ravencoin",
+        "project_name": "Ravencoin",
+        "symbol": "RVN",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "iostoken": {
+    "project_info": {
+      "coin_id": "iostoken",
+      "name": "IOST",
+      "symbol": "IOST",
+      "developer_data": {
+        "forks": 114,
+        "stars": 564,
+        "subscribers": 88,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1052,
+        "pull_request_contributors": 24,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "iost-official",
+        "name": "go-ios",
+        "url": "https://github.com/iost-official/go-iost",
+        "coin_id": "iostoken",
+        "project_name": "IOST",
+        "symbol": "IOST",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "iost-official",
+        "name": "explorer",
+        "url": "https://github.com/iost-official/explorer",
+        "coin_id": "iostoken",
+        "project_name": "IOST",
+        "symbol": "IOST",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "iost-official",
+        "name": "iost-webapp",
+        "url": "https://github.com/iost-official/iost-webapp",
+        "coin_id": "iostoken",
+        "project_name": "IOST",
+        "symbol": "IOST",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "omisego": {
+    "project_info": {
+      "coin_id": "omisego",
+      "name": "OMG Network",
+      "symbol": "OMG",
+      "developer_data": {
+        "forks": 63,
+        "stars": 116,
+        "subscribers": 23,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 363,
+        "pull_request_contributors": 23,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "omgnetwork",
+        "name": "plasma-contracts",
+        "url": "https://github.com/omgnetwork/plasma-contracts",
+        "coin_id": "omisego",
+        "project_name": "OMG Network",
+        "symbol": "OMG",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "omgnetwork",
+        "name": "elixir-om",
+        "url": "https://github.com/omgnetwork/elixir-omg",
+        "coin_id": "omisego",
+        "project_name": "OMG Network",
+        "symbol": "OMG",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "zencash": {
+    "project_info": {
+      "coin_id": "zencash",
+      "name": "Horizen",
+      "symbol": "ZEN",
+      "developer_data": {
+        "forks": 59,
+        "stars": 99,
+        "subscribers": 33,
+        "total_issues": 88,
+        "closed_issues": 76,
+        "pull_requests_merged": 243,
+        "pull_request_contributors": 28,
+        "code_additions_deletions_4_weeks": {
+          "additions": 22,
+          "deletions": -30
+        },
+        "commit_count_4_weeks": 3,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "HorizenOfficial",
+        "name": "ginger-lib",
+        "url": "https://github.com/HorizenOfficial/ginger-lib",
+        "coin_id": "zencash",
+        "project_name": "Horizen",
+        "symbol": "ZEN",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "HorizenOfficial",
+        "name": "HorizenAcademy",
+        "url": "https://github.com/HorizenOfficial/HorizenAcademy",
+        "coin_id": "zencash",
+        "project_name": "Horizen",
+        "symbol": "ZEN",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "HorizenOfficial",
+        "name": "Sidechains-SDK",
+        "url": "https://github.com/HorizenOfficial/Sidechains-SDK",
+        "coin_id": "zencash",
+        "project_name": "Horizen",
+        "symbol": "ZEN",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "HorizenOfficial",
+        "name": "zen",
+        "url": "https://github.com/HorizenOfficial/zen",
+        "coin_id": "zencash",
+        "project_name": "Horizen",
+        "symbol": "ZEN",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "ontology": {
+    "project_info": {
+      "coin_id": "ontology",
+      "name": "Ontology",
+      "symbol": "ONT",
+      "developer_data": {
+        "forks": 293,
+        "stars": 834,
+        "subscribers": 120,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 989,
+        "pull_request_contributors": 49,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "ontio",
+        "name": "ontology",
+        "url": "https://github.com/ontio/ontology",
+        "coin_id": "ontology",
+        "project_name": "Ontology",
+        "symbol": "ONT",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "ontio",
+        "name": "ontology-python-sdk",
+        "url": "https://github.com/ontio/ontology-python-sdk",
+        "coin_id": "ontology",
+        "project_name": "Ontology",
+        "symbol": "ONT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ontio",
+        "name": "ontology-ts-sdk",
+        "url": "https://github.com/ontio/ontology-ts-sdk",
+        "coin_id": "ontology",
+        "project_name": "Ontology",
+        "symbol": "ONT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "ontio",
+        "name": "ontology-go-sdk",
+        "url": "https://github.com/ontio/ontology-go-sdk",
+        "coin_id": "ontology",
+        "project_name": "Ontology",
+        "symbol": "ONT",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "kava": {
+    "project_info": {
+      "coin_id": "kava",
+      "name": "Kava",
+      "symbol": "KAVA",
+      "developer_data": {
+        "forks": 346,
+        "stars": 457,
+        "subscribers": 37,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1517,
+        "pull_request_contributors": 49,
+        "code_additions_deletions_4_weeks": {
+          "additions": 4,
+          "deletions": -7
+        },
+        "commit_count_4_weeks": 1,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Kava-Labs",
+        "name": "kava",
+        "url": "https://github.com/Kava-Labs/kava",
+        "coin_id": "kava",
+        "project_name": "Kava",
+        "symbol": "KAVA",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "Kava-Labs",
+        "name": "kava-devne",
+        "url": "https://github.com/Kava-Labs/kava-devnet",
+        "coin_id": "kava",
+        "project_name": "Kava",
+        "symbol": "KAVA",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "celer-network": {
+    "project_info": {
+      "coin_id": "celer-network",
+      "name": "Celer Network",
+      "symbol": "CELR",
+      "developer_data": {
+        "forks": 97,
+        "stars": 140,
+        "subscribers": 19,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 236,
+        "pull_request_contributors": 18,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "celer-network",
+        "name": "sgn-v2-contracts",
+        "url": "https://github.com/celer-network/sgn-v2-contracts",
+        "coin_id": "celer-network",
+        "project_name": "Celer Network",
+        "symbol": "CELR",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "sushi": {
+    "project_info": {
+      "coin_id": "sushi",
+      "name": "Sushi",
+      "symbol": "SUSHI",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "sushiswap",
+        "name": "sushiswap",
+        "url": "https://github.com/sushiswap/sushiswap",
+        "coin_id": "sushi",
+        "project_name": "Sushi",
+        "symbol": "SUSHI",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "the-graph": {
+    "project_info": {
+      "coin_id": "the-graph",
+      "name": "The Graph",
+      "symbol": "GRT",
+      "developer_data": {
+        "forks": 1034,
+        "stars": 2987,
+        "subscribers": 90,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 2944,
+        "pull_request_contributors": 120,
+        "code_additions_deletions_4_weeks": {
+          "additions": 115,
+          "deletions": -17
+        },
+        "commit_count_4_weeks": 8,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "graphprotocol",
+        "name": "graph-node",
+        "url": "https://github.com/graphprotocol/graph-node",
+        "coin_id": "the-graph",
+        "project_name": "The Graph",
+        "symbol": "GRT",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "graphprotocol",
+        "name": "graph-ts",
+        "url": "https://github.com/graphprotocol/graph-ts",
+        "coin_id": "the-graph",
+        "project_name": "The Graph",
+        "symbol": "GRT",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "graphprotocol",
+        "name": "graph-cl",
+        "url": "https://github.com/graphprotocol/graph-cli",
+        "coin_id": "the-graph",
+        "project_name": "The Graph",
+        "symbol": "GRT",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "ankr": {
+    "project_info": {
+      "coin_id": "ankr",
+      "name": "Ankr Network",
+      "symbol": "ANKR",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Ankr-network",
+        "name": "dccn-common",
+        "url": "https://github.com/Ankr-network/dccn-common",
+        "coin_id": "ankr",
+        "project_name": "Ankr Network",
+        "symbol": "ANKR",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Ankr-network",
+        "name": "dccn-u",
+        "url": "https://github.com/Ankr-network/dccn-ui",
+        "coin_id": "ankr",
+        "project_name": "Ankr Network",
+        "symbol": "ANKR",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Ankr-network",
+        "name": "dccn-hub",
+        "url": "https://github.com/Ankr-network/dccn-hub",
+        "coin_id": "ankr",
+        "project_name": "Ankr Network",
+        "symbol": "ANKR",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Ankr-network",
+        "name": "dccn-daemon",
+        "url": "https://github.com/Ankr-network/dccn-daemon",
+        "coin_id": "ankr",
+        "project_name": "Ankr Network",
+        "symbol": "ANKR",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Ankr-network",
+        "name": "dccn-cl",
+        "url": "https://github.com/Ankr-network/dccn-cli",
+        "coin_id": "ankr",
+        "project_name": "Ankr Network",
+        "symbol": "ANKR",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "ocean-protocol": {
+    "project_info": {
+      "coin_id": "ocean-protocol",
+      "name": "Ocean Protocol",
+      "symbol": "OCEAN",
+      "developer_data": {
+        "forks": 307,
+        "stars": 212,
+        "subscribers": 25,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 73,
+        "pull_request_contributors": 17,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "repositories": [
+      {
+        "owner": "oceanprotocol",
+        "name": "marke",
+        "url": "https://github.com/oceanprotocol/market",
+        "coin_id": "ocean-protocol",
+        "project_name": "Ocean Protocol",
+        "symbol": "OCEAN",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "oceanprotocol",
+        "name": "pleuston",
+        "url": "https://github.com/oceanprotocol/pleuston",
+        "coin_id": "ocean-protocol",
+        "project_name": "Ocean Protocol",
+        "symbol": "OCEAN",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "oceanprotocol",
+        "name": "squid-js",
+        "url": "https://github.com/oceanprotocol/squid-js",
+        "coin_id": "ocean-protocol",
+        "project_name": "Ocean Protocol",
+        "symbol": "OCEAN",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "oceanprotocol",
+        "name": "keeper-contracts",
+        "url": "https://github.com/oceanprotocol/keeper-contracts",
+        "coin_id": "ocean-protocol",
+        "project_name": "Ocean Protocol",
+        "symbol": "OCEAN",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "coti": {
+    "project_info": {
+      "coin_id": "coti",
+      "name": "COTI",
+      "symbol": "COTI",
+      "developer_data": {
+        "forks": 4,
+        "stars": 21,
+        "subscribers": 5,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 14,
+        "pull_request_contributors": 4,
+        "code_additions_deletions_4_weeks": {
+          "additions": 4,
+          "deletions": -4
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "coti-io",
+        "name": "confidentiality-contracts",
+        "url": "https://github.com/coti-io/confidentiality-contracts",
+        "coin_id": "coti",
+        "project_name": "COTI",
+        "symbol": "COTI",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "band-protocol": {
+    "project_info": {
+      "coin_id": "band-protocol",
+      "name": "Band Protocol",
+      "symbol": "BAND",
+      "developer_data": {
+        "forks": 51,
+        "stars": 222,
+        "subscribers": 18,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 910,
+        "pull_request_contributors": 19,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "bandprotocol",
+        "name": "bandchain",
+        "url": "https://github.com/bandprotocol/bandchain",
+        "coin_id": "band-protocol",
+        "project_name": "Band Protocol",
+        "symbol": "BAND",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "kusama": {
+    "project_info": {
+      "coin_id": "kusama",
+      "name": "Kusama",
+      "symbol": "KSM",
+      "developer_data": {
+        "forks": 23,
+        "stars": 31,
+        "subscribers": 13,
+        "total_issues": 22,
+        "closed_issues": 12,
+        "pull_requests_merged": 33,
+        "pull_request_contributors": 17,
+        "code_additions_deletions_4_weeks": {
+          "additions": 61,
+          "deletions": -30
+        },
+        "commit_count_4_weeks": 8,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "paritytech",
+        "name": "polkadot-sdk",
+        "url": "https://github.com/paritytech/polkadot-sdk",
+        "coin_id": "kusama",
+        "project_name": "Kusama",
+        "symbol": "KSM",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "loopring": {
+    "project_info": {
+      "coin_id": "loopring",
+      "name": "Loopring",
+      "symbol": "LRC",
+      "developer_data": {
+        "forks": 124,
+        "stars": 335,
+        "subscribers": 51,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1264,
+        "pull_request_contributors": 27,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Loopring",
+        "name": "protocols",
+        "url": "https://github.com/Loopring/protocols",
+        "coin_id": "loopring",
+        "project_name": "Loopring",
+        "symbol": "LRC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "Loopring",
+        "name": "relay",
+        "url": "https://github.com/Loopring/relay",
+        "coin_id": "loopring",
+        "project_name": "Loopring",
+        "symbol": "LRC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Loopring",
+        "name": "lightcone",
+        "url": "https://github.com/Loopring/lightcone",
+        "coin_id": "loopring",
+        "project_name": "Loopring",
+        "symbol": "LRC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Loopring",
+        "name": "loopr",
+        "url": "https://github.com/Loopring/loopr",
+        "coin_id": "loopring",
+        "project_name": "Loopring",
+        "symbol": "LRC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "Loopring",
+        "name": "protocol2",
+        "url": "https://github.com/Loopring/protocol2",
+        "coin_id": "loopring",
+        "project_name": "Loopring",
+        "symbol": "LRC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "storj": {
+    "project_info": {
+      "coin_id": "storj",
+      "name": "Storj",
+      "symbol": "STORJ",
+      "developer_data": {
+        "forks": 387,
+        "stars": 2905,
+        "subscribers": 101,
+        "total_issues": 2718,
+        "closed_issues": 2310,
+        "pull_requests_merged": 3473,
+        "pull_request_contributors": 91,
+        "code_additions_deletions_4_weeks": {
+          "additions": 9574,
+          "deletions": -3795
+        },
+        "commit_count_4_weeks": 124,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "storj",
+        "name": "storj",
+        "url": "https://github.com/storj/storj",
+        "coin_id": "storj",
+        "project_name": "Storj",
+        "symbol": "STORJ",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "bluzelle": {
+    "project_info": {
+      "coin_id": "bluzelle",
+      "name": "Bluzelle",
+      "symbol": "BLZ",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "njmurarka",
+        "name": "bluzelle",
+        "url": "https://github.com/njmurarka/bluzelle",
+        "coin_id": "bluzelle",
+        "project_name": "Bluzelle",
+        "symbol": "BLZ",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "iexec-rlc": {
+    "project_info": {
+      "coin_id": "iexec-rlc",
+      "name": "iExec RLC",
+      "symbol": "RLC",
+      "developer_data": {
+        "forks": 41,
+        "stars": 416,
+        "subscribers": 38,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 229,
+        "pull_request_contributors": 14,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 5,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "iExecBlockchainComputing",
+        "name": "iexec-sdk",
+        "url": "https://github.com/iExecBlockchainComputing/iexec-sdk",
+        "coin_id": "iexec-rlc",
+        "project_name": "iExec RLC",
+        "symbol": "RLC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "iExecBlockchainComputing",
+        "name": "iexec-stack",
+        "url": "https://github.com/iExecBlockchainComputing/iexec-stack",
+        "coin_id": "iexec-rlc",
+        "project_name": "iExec RLC",
+        "symbol": "RLC",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "iExecBlockchainComputing",
+        "name": "PoCo",
+        "url": "https://github.com/iExecBlockchainComputing/PoCo",
+        "coin_id": "iexec-rlc",
+        "project_name": "iExec RLC",
+        "symbol": "RLC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "truefi": {
+    "project_info": {
+      "coin_id": "truefi",
+      "name": "TrueFi",
+      "symbol": "TRU",
+      "developer_data": {
+        "forks": 0,
+        "stars": 7,
+        "subscribers": 4,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 17,
+        "pull_request_contributors": 5,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "trusttoken",
+        "name": "truefi-spec",
+        "url": "https://github.com/trusttoken/truefi-spec",
+        "coin_id": "truefi",
+        "project_name": "TrueFi",
+        "symbol": "TRU",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "reserve-rights-token": {
+    "project_info": {
+      "coin_id": "reserve-rights-token",
+      "name": "Reserve Rights",
+      "symbol": "RSR",
+      "developer_data": {
+        "forks": 4,
+        "stars": 20,
+        "subscribers": 12,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1,
+        "pull_request_contributors": 1,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "reserve-protocol",
+        "name": "rsr",
+        "url": "https://github.com/reserve-protocol/rsr",
+        "coin_id": "reserve-rights-token",
+        "project_name": "Reserve Rights",
+        "symbol": "RSR",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "paxos-standard": {
+    "project_info": {
+      "coin_id": "paxos-standard",
+      "name": "Pax Dollar",
+      "symbol": "USDP",
+      "developer_data": {
+        "forks": 89,
+        "stars": 173,
+        "subscribers": 42,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 13,
+        "pull_request_contributors": 6,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "paxosglobal",
+        "name": "pax-contracts",
+        "url": "https://github.com/paxosglobal/pax-contracts",
+        "coin_id": "paxos-standard",
+        "project_name": "Pax Dollar",
+        "symbol": "USDP",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "linear": {
+    "project_info": {
+      "coin_id": "linear",
+      "name": "Linear",
+      "symbol": "LINA",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Linear-finance",
+        "name": "linear",
+        "url": "https://github.com/Linear-finance/linear",
+        "coin_id": "linear",
+        "project_name": "Linear",
+        "symbol": "LINA",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "cartesi": {
+    "project_info": {
+      "coin_id": "cartesi",
+      "name": "Cartesi",
+      "symbol": "CTSI",
+      "developer_data": {
+        "forks": 38,
+        "stars": 85,
+        "subscribers": 13,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 154,
+        "pull_request_contributors": 11,
+        "code_additions_deletions_4_weeks": {
+          "additions": 71,
+          "deletions": -58
+        },
+        "commit_count_4_weeks": 5,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "cartesi",
+        "name": "machine-emulator",
+        "url": "https://github.com/cartesi/machine-emulator",
+        "coin_id": "cartesi",
+        "project_name": "Cartesi",
+        "symbol": "CTSI",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "cartesi",
+        "name": "arbitration-dlib",
+        "url": "https://github.com/cartesi/arbitration-dlib",
+        "coin_id": "cartesi",
+        "project_name": "Cartesi",
+        "symbol": "CTSI",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "cartesi",
+        "name": "machine-solidity-step",
+        "url": "https://github.com/cartesi/machine-solidity-step",
+        "coin_id": "cartesi",
+        "project_name": "Cartesi",
+        "symbol": "CTSI",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "alpha-finance": {
+    "project_info": {
+      "coin_id": "alpha-finance",
+      "name": "Stella",
+      "symbol": "ALPHA",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "AlphaFinanceLab",
+        "name": "alphahomora",
+        "url": "https://github.com/AlphaFinanceLab/alphahomora",
+        "coin_id": "alpha-finance",
+        "project_name": "Stella",
+        "symbol": "ALPHA",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "AlphaFinanceLab",
+        "name": "alpha-lending-smart-contrac",
+        "url": "https://github.com/AlphaFinanceLab/alpha-lending-smart-contract",
+        "coin_id": "alpha-finance",
+        "project_name": "Stella",
+        "symbol": "ALPHA",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "celo": {
+    "project_info": {
+      "coin_id": "celo",
+      "name": "Celo",
+      "symbol": "CELO",
+      "developer_data": {
+        "forks": 192,
+        "stars": 506,
+        "subscribers": 67,
+        "total_issues": 848,
+        "closed_issues": 772,
+        "pull_requests_merged": 1054,
+        "pull_request_contributors": 65,
+        "code_additions_deletions_4_weeks": {
+          "additions": 20,
+          "deletions": -12
+        },
+        "commit_count_4_weeks": 3,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "celo-org",
+        "name": "celo-blockchain",
+        "url": "https://github.com/celo-org/celo-blockchain",
+        "coin_id": "celo",
+        "project_name": "Celo",
+        "symbol": "CELO",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "celo-org",
+        "name": "celo-monorepo",
+        "url": "https://github.com/celo-org/celo-monorepo",
+        "coin_id": "celo",
+        "project_name": "Celo",
+        "symbol": "CELO",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "btc-standard-hashrate-token": {
+    "project_info": {
+      "coin_id": "btc-standard-hashrate-token",
+      "name": "BTC Standard Hashrate Token",
+      "symbol": "BTCST",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "Standard-Hashrate-Group",
+        "name": "SmartContracts",
+        "url": "https://github.com/Standard-Hashrate-Group/SmartContracts",
+        "coin_id": "btc-standard-hashrate-token",
+        "project_name": "BTC Standard Hashrate Token",
+        "symbol": "BTCST",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "verge": {
+    "project_info": {
+      "coin_id": "verge",
+      "name": "Verge",
+      "symbol": "XVG",
+      "developer_data": {
+        "forks": 396,
+        "stars": 1415,
+        "subscribers": 265,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 273,
+        "pull_request_contributors": 68,
+        "code_additions_deletions_4_weeks": {
+          "additions": 1650,
+          "deletions": -1152
+        },
+        "commit_count_4_weeks": 22,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "vergecurrency",
+        "name": "verge",
+        "url": "https://github.com/vergecurrency/verge",
+        "coin_id": "verge",
+        "project_name": "Verge",
+        "symbol": "XVG",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "district0x": {
+    "project_info": {
+      "coin_id": "district0x",
+      "name": "district0x",
+      "symbol": "DNT",
+      "developer_data": {
+        "forks": 23,
+        "stars": 86,
+        "subscribers": 11,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 112,
+        "pull_request_contributors": 10,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "district0x",
+        "name": "name-bazaar",
+        "url": "https://github.com/district0x/name-bazaar",
+        "coin_id": "district0x",
+        "project_name": "district0x",
+        "symbol": "DNT",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "stratis": {
+    "project_info": {
+      "coin_id": "stratis",
+      "name": "Stratis",
+      "symbol": "STRAX",
+      "developer_data": {
+        "forks": 49,
+        "stars": 43,
+        "subscribers": 23,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 343,
+        "pull_request_contributors": 18,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "stratisproject",
+        "name": "StratisCore",
+        "url": "https://github.com/stratisproject/StratisCore",
+        "coin_id": "stratis",
+        "project_name": "Stratis",
+        "symbol": "STRAX",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "stratisproject",
+        "name": "Breeze",
+        "url": "https://github.com/stratisproject/Breeze",
+        "coin_id": "stratis",
+        "project_name": "Stratis",
+        "symbol": "STRAX",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "stratisproject",
+        "name": "FederatedSidechains",
+        "url": "https://github.com/stratisproject/FederatedSidechains",
+        "coin_id": "stratis",
+        "project_name": "Stratis",
+        "symbol": "STRAX",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "akropolis": {
+    "project_info": {
+      "coin_id": "akropolis",
+      "name": "Kaon",
+      "symbol": "KAON",
+      "developer_data": {
+        "forks": 4,
+        "stars": 8,
+        "subscribers": 5,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 42,
+        "pull_request_contributors": 2,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "akropolisio",
+        "name": "akropolis-network",
+        "url": "https://github.com/akropolisio/akropolis-network",
+        "coin_id": "akropolis",
+        "project_name": "Kaon",
+        "symbol": "KAON",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "akropolisio",
+        "name": "akropolisOS",
+        "url": "https://github.com/akropolisio/akropolisOS",
+        "coin_id": "akropolis",
+        "project_name": "Kaon",
+        "symbol": "KAON",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "akropolisio",
+        "name": "akropolis-polkado",
+        "url": "https://github.com/akropolisio/akropolis-polkadot",
+        "coin_id": "akropolis",
+        "project_name": "Kaon",
+        "symbol": "KAON",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "akropolisio",
+        "name": "akropolis-discovery",
+        "url": "https://github.com/akropolisio/akropolis-discovery",
+        "coin_id": "akropolis",
+        "project_name": "Kaon",
+        "symbol": "KAON",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "zcoin": {
+    "project_info": {
+      "coin_id": "zcoin",
+      "name": "Firo",
+      "symbol": "FIRO",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "firoorg",
+        "name": "firo",
+        "url": "https://github.com/firoorg/firo",
+        "coin_id": "zcoin",
+        "project_name": "Firo",
+        "symbol": "FIRO",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "bitshares": {
+    "project_info": {
+      "coin_id": "bitshares",
+      "name": "BitShares",
+      "symbol": "BTS",
+      "developer_data": {
+        "forks": 0,
+        "stars": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": null,
+          "deletions": null
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "bitshares",
+        "name": "bitshares-core",
+        "url": "https://github.com/bitshares/bitshares-core",
+        "coin_id": "bitshares",
+        "project_name": "BitShares",
+        "symbol": "BTS",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "bitshares",
+        "name": "python-bitshares",
+        "url": "https://github.com/bitshares/python-bitshares",
+        "coin_id": "bitshares",
+        "project_name": "BitShares",
+        "symbol": "BTS",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "bitshares",
+        "name": "bitshares-u",
+        "url": "https://github.com/bitshares/bitshares-ui",
+        "coin_id": "bitshares",
+        "project_name": "BitShares",
+        "symbol": "BTS",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "bitshares",
+        "name": "bitsharesjs-ws",
+        "url": "https://github.com/bitshares/bitsharesjs-ws",
+        "coin_id": "bitshares",
+        "project_name": "BitShares",
+        "symbol": "BTS",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "bitshares",
+        "name": "bitsharesjs",
+        "url": "https://github.com/bitshares/bitsharesjs",
+        "coin_id": "bitshares",
+        "project_name": "BitShares",
+        "symbol": "BTS",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "mithril": {
+    "project_info": {
+      "coin_id": "mithril",
+      "name": "Mithril",
+      "symbol": "MITH",
+      "developer_data": {
+        "forks": 5,
+        "stars": 12,
+        "subscribers": 3,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "pull_request_contributors": 0,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "mithio",
+        "name": "mithril-smart-contrac",
+        "url": "https://github.com/mithio/mithril-smart-contract",
+        "coin_id": "mithril",
+        "project_name": "Mithril",
+        "symbol": "MITH",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "cortex": {
+    "project_info": {
+      "coin_id": "cortex",
+      "name": "Cortex",
+      "symbol": "CTXC",
+      "developer_data": {
+        "forks": 3,
+        "stars": 14,
+        "subscribers": 6,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 10,
+        "pull_request_contributors": 2,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "CortexFoundation",
+        "name": "Cortex_Release",
+        "url": "https://github.com/CortexFoundation/Cortex_Release",
+        "coin_id": "cortex",
+        "project_name": "Cortex",
+        "symbol": "CTXC",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "CortexFoundation",
+        "name": "ncnn",
+        "url": "https://github.com/CortexFoundation/ncnn",
+        "coin_id": "cortex",
+        "project_name": "Cortex",
+        "symbol": "CTXC",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "origin-protocol": {
+    "project_info": {
+      "coin_id": "origin-protocol",
+      "name": "Origin Token",
+      "symbol": "OGN",
+      "developer_data": {
+        "forks": 204,
+        "stars": 652,
+        "subscribers": 79,
+        "total_issues": 1393,
+        "closed_issues": 1097,
+        "pull_requests_merged": 2887,
+        "pull_request_contributors": 72,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "OriginProtocol",
+        "name": "origin",
+        "url": "https://github.com/OriginProtocol/origin",
+        "coin_id": "origin-protocol",
+        "project_name": "Origin Token",
+        "symbol": "OGN",
+        "is_primary": true,
+        "priority": "primary"
+      },
+      {
+        "owner": "OriginProtocol",
+        "name": "dshop",
+        "url": "https://github.com/OriginProtocol/dshop",
+        "coin_id": "origin-protocol",
+        "project_name": "Origin Token",
+        "symbol": "OGN",
+        "is_primary": false,
+        "priority": "secondary"
+      },
+      {
+        "owner": "OriginProtocol",
+        "name": "origin-dollar",
+        "url": "https://github.com/OriginProtocol/origin-dollar",
+        "coin_id": "origin-protocol",
+        "project_name": "Origin Token",
+        "symbol": "OGN",
+        "is_primary": false,
+        "priority": "secondary"
+      }
+    ]
+  },
+  "beefy-finance": {
+    "project_info": {
+      "coin_id": "beefy-finance",
+      "name": "Beefy",
+      "symbol": "BIFI",
+      "developer_data": {
+        "forks": 258,
+        "stars": 193,
+        "subscribers": 21,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 1061,
+        "pull_request_contributors": 81,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "beefyfinance",
+        "name": "beefy-app",
+        "url": "https://github.com/beefyfinance/beefy-app",
+        "coin_id": "beefy-finance",
+        "project_name": "Beefy",
+        "symbol": "BIFI",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  },
+  "bittorrent": {
+    "project_info": {
+      "coin_id": "bittorrent",
+      "name": "BitTorrent",
+      "symbol": "BTT",
+      "developer_data": {
+        "forks": 104,
+        "stars": 410,
+        "subscribers": 112,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 47,
+        "pull_request_contributors": 21,
+        "code_additions_deletions_4_weeks": {
+          "additions": 0,
+          "deletions": 0
+        },
+        "commit_count_4_weeks": 0,
+        "last_4_weeks_commit_activity_series": []
+      }
+    },
+    "repositories": [
+      {
+        "owner": "bittorrent",
+        "name": "bittorrent.or",
+        "url": "https://github.com/bittorrent/bittorrent.org",
+        "coin_id": "bittorrent",
+        "project_name": "BitTorrent",
+        "symbol": "BTT",
+        "is_primary": true,
+        "priority": "primary"
+      }
+    ]
+  }
+}

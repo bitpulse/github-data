@@ -7,6 +7,7 @@ from loguru import logger
 from src.collectors.base_collector import BaseCollector
 from src.config.settings import settings
 from src.config.metrics_config import REPO_METRICS, TIME_WINDOWS
+from src.utils.crypto_mapping import crypto_mapper
 
 
 class RepositoryStatsCollector(BaseCollector):
@@ -19,6 +20,9 @@ class RepositoryStatsCollector(BaseCollector):
         """Collect comprehensive repository statistics"""
         try:
             repo = self.get_repository(owner, repo_name)
+            
+            # Get crypto project mapping
+            repo_info = crypto_mapper.get_repo_info(owner, repo_name)
             
             # Get previous data for delta calculations
             previous_data = self.get_previous_data({
@@ -35,19 +39,34 @@ class RepositoryStatsCollector(BaseCollector):
             # Calculate deltas if previous data exists
             stats_with_deltas = self._calculate_deltas(basic_stats, previous_data)
             
-            # Compile final data structure
+            # Compile final data structure with crypto mapping
+            repo_metadata = {
+                'owner': owner,
+                'name': repo_name,
+                'id': repo.id,
+                'language': repo.language,
+                'created_at': repo.created_at,
+                'updated_at': repo.updated_at,
+                'description': repo.description,
+                'topics': list(repo.get_topics())
+            }
+            
+            # Add crypto project information if available
+            if repo_info:
+                repo_metadata.update({
+                    'coin_id': repo_info['coin_id'],
+                    'project_name': repo_info['project_name'],
+                    'symbol': repo_info['symbol'],
+                    'is_primary_repo': repo_info['is_primary'],
+                    'repo_priority': repo_info['priority']
+                })
+                logger.info(f"Linked {owner}/{repo_name} to crypto project: {repo_info['project_name']} ({repo_info['coin_id']})")
+            else:
+                logger.warning(f"No crypto project mapping found for {owner}/{repo_name}")
+            
             data = {
                 'timestamp': datetime.utcnow(),
-                'repo': {
-                    'owner': owner,
-                    'name': repo_name,
-                    'id': repo.id,
-                    'language': repo.language,
-                    'created_at': repo.created_at,
-                    'updated_at': repo.updated_at,
-                    'description': repo.description,
-                    'topics': list(repo.get_topics())
-                },
+                'repo': repo_metadata,
                 'stats': stats_with_deltas,
                 'activity': activity_metrics
             }
