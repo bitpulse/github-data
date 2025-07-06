@@ -5,6 +5,7 @@ A comprehensive time series data collection system that monitors GitHub reposito
 ## 🎯 Purpose
 
 This system bridges the gap between your crypto market data and GitHub development metrics, enabling:
+
 - Correlation analysis between development activity and market performance
 - Real-time monitoring of project health and developer engagement
 - Historical trend analysis for predictive insights
@@ -44,6 +45,7 @@ That's it! The collector will run continuously in Docker.
 ## ⚙️ Configuration
 
 Edit `.env` file:
+
 ```env
 # Required
 GITHUB_TOKEN=your_github_token
@@ -72,13 +74,14 @@ docker-compose down
 # View collected data
 docker-compose exec github-collector python view_summary.py
 
-# Check status
+# Check status!
 docker-compose ps
 ```
 
 ## 📊 Data Collected
 
 ### Repository Metrics (Hourly)
+
 - **Basic Stats**: Stars, forks, watchers, open issues (with change tracking)
 - **Activity Metrics**: Commits (24h/7d), active contributors, top contributors
 - **Crypto Mapping**: Each data point linked to `coin_id` for correlation
@@ -87,6 +90,7 @@ docker-compose ps
 ### Time Series Collections
 
 **`repo_stats_timeseries`** - Raw hourly data:
+
 ```javascript
 {
   timestamp: ISODate("2024-01-15T10:00:00Z"),
@@ -112,6 +116,7 @@ docker-compose ps
 ```
 
 **`daily_repo_stats`** - Aggregated for charts:
+
 ```javascript
 {
   date: "2024-01-15",
@@ -146,6 +151,7 @@ Your crypto_project Collection
 ### For Backend Developers
 
 📚 **See the comprehensive [Backend API Guide](BACKEND_API_GUIDE.md)** for:
+
 - Complete API endpoint examples
 - MongoDB query patterns
 - Frontend integration examples
@@ -156,15 +162,15 @@ Your crypto_project Collection
 ```javascript
 // Get latest stats for a coin
 db.repo_stats_timeseries.findOne(
-  {"repo.coin_id": "bitcoin"},
-  {sort: {timestamp: -1}}
-)
+  { "repo.coin_id": "bitcoin" },
+  { sort: { timestamp: -1 } }
+);
 
 // Get daily aggregations for charts
 db.daily_repo_stats.find({
-  "coin_id": "bitcoin",
-  "timestamp": {$gte: new Date(Date.now() - 30*24*60*60*1000)}
-})
+  coin_id: "bitcoin",
+  timestamp: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) },
+});
 ```
 
 ## 📖 Documentation
